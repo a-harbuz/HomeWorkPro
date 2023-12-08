@@ -1,6 +1,8 @@
 package de.telran.hw000;
 
 public class Main {
+    // найти второй и третий по минимальности элемент в массиве.
+    // (без исп.сортировки)
     public static void main(String[] args) {
         int[] arr = {2,3,6,7,8,-5,-7,8,22,99,15,16,4,5};
         int min1 = Integer.MAX_VALUE;
@@ -19,6 +21,3 @@ public class Main {
     }
 }
 
-
-// найти второй и третий по минимальности элемент в массиве.
-// (без исп.сортировки)
