@@ -1,0 +1,471 @@
+Index: src/main/java/de/telran/hw001/task2/AbstractBook.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package de.telran.hw001.task2;public class AbstractBook {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/de/telran/hw001/task2/AbstractBook.java b/src/main/java/de/telran/hw001/task2/AbstractBook.java
+--- a/src/main/java/de/telran/hw001/task2/AbstractBook.java	(revision a64edbf88747ecb660a73b2b0a24a24b0a6169a9)
++++ b/src/main/java/de/telran/hw001/task2/AbstractBook.java	(date 1702064576268)
+@@ -1,2 +1,116 @@
+-package de.telran.hw001.task2;public class AbstractBook {
+-}
++//package de.telran.hw001.task2;
++//
++////public abstract class AbstractBook {
++////    abstract void addToCatalog(Book[] books); //Добавление книги в каталог
++////    abstract void removeFromCatalog(Book[] books); //Удаление книги из каталога
++////
++////}
++////
++////public abstract class AbstractUser {
++////    abstract void borrowBook(Book[] books); // Взятие книги на время.
++////    abstract void returnBook(Book[] books); //Возврат книги.
++////}
++////
++////interface ICatalogManagement{
++////    default void sortBooksByTitle(Book[] books){
++////
++////    } // Сортировка книг по названию.
++////    default void findBooksByAuthor(Book[] books, String author){
++////
++////    } //Поиск книг по автору.
++////}
++////
++////interface IUserManagement{
++////    default void registerUser(User user){
++////
++////    } // Регистрация пользователя.
++////    default void deleteUser(User user){
++////
++////    } // Удаление пользователя.
++////}
++////
++////
++//////================= Clases =================================
++////class FictionBook extends AbstractBook {
++////    void calculatePopularity(Book[] books) {
++////
++////    } //Вычисление популярности.
++////
++////    void applyDiscount(Book[] books, double discount){
++////
++////    } // Применение скидки.
++////}
++////class NonFictionBook extends AbstractBook{
++////    void updateInformation(Book[] books, String newInfo){
++////
++////    } //Обновление информации о книге.
++////    void listRelatedBooks(Book[] books, String topic){
++////
++////    } //Список книг по теме.
++////}
++////
++////class BookCatalog extends ICatalogManagement{
++////    void listNewArrivals(Book[] books){
++////
++////    } //Список новых поступлений.
++////
++////    void listMostBorrowedBooks(Book[] books){
++////
++////    } // Список наиболее взятых книг.
++////}
++////class UserAccounts extends AbstractUser implements IUserManagement {
++////    void updateAccount(User user, AccountDetails details){
++////
++////        } //Обновление учетной записи.
++////
++////    void trackUserHistory(User user){
++////
++////        } //Отслеживание истории пользователя.
++////}
++////class BookReview extends FictionBook {
++////    void addReview(Book[] books, Review review){
++////
++////    } //Добавление отзыва.
++////
++////    void listReviews(Book[] books){
++////
++////    } //Список отзывов.
++////}
++////class ReferenceBook extends NonFictionBook {
++////        void listReferences(Book[] books){
++////            //Список ссылок.
++////        }
++////
++////        void updateReferences(Book[] books, Reference[] newReferences){
++////            //Обновление списка ссылок.
++////        }
++////}
++////class LibraryAnalytics implements ICatalogManagement{
++////        void calculateAverageRating(Book[] books){
++////        //Вычисление средней оценки книг.
++////        }
++////
++////        void findLeastReadBooks(Book[] books){
++////        //Поиск наименее читаемых книг.
++////        }
++////}
++////class Ebook extends FictionBook{
++////    void downloadBook(Book[] books){
++////        // Скачивание книги.
++////    }
++////    void updateEbookFormat(Book[] books, String format){
++////        // Обновление формата электронной книги.
++////    }
++////}
++////
++////class Book{
++////    String name;
++////    String author;
++////    Integer year;
++////}
++////
++////class User{
++////    String name;
++////    String login;
++////    String password;
++////}
+\ No newline at end of file
+Index: src/main/java/de/telran/hw000/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package de.telran.hw000;public class Main {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/de/telran/hw000/Main.java b/src/main/java/de/telran/hw000/Main.java
+--- a/src/main/java/de/telran/hw000/Main.java	(revision a64edbf88747ecb660a73b2b0a24a24b0a6169a9)
++++ b/src/main/java/de/telran/hw000/Main.java	(date 1702064006268)
+@@ -1,2 +1,24 @@
+-package de.telran.hw000;public class Main {
++package de.telran.hw000;
++
++public class Main {
++    public static void main(String[] args) {
++        int[] arr = {2,3,6,7,8,-5,-7,8,22,99,15,16,4,5};
++        int min1 = Integer.MAX_VALUE;
++        int min2 = Integer.MAX_VALUE;
++        int min3 = Integer.MAX_VALUE;
++        for (int x = 0; x < 3; x++) {
++            for (int i = 0; i < arr.length; i++) {
++                if (arr[i]<min1) min1 = arr[i];
++                if (arr[i]<min2 && arr[i]>min1) min2 = arr[i];
++                if (arr[i]<min3 && arr[i]>min1 && arr[i]>min2) min3 = arr[i];
++            }
++        }
++
++        System.out.println("Второй минимальный элемент = " + min2);
++        System.out.println("Третий минимальный элемент = " + min3);
++    }
+ }
++
++
++// найти второй и третий по минимальности элемент в массиве.
++// (без исп.сортировки)
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"324fa954-5c3f-4087-b8d7-2e90e8ac4e30\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\"><![CDATA[{\r\n  \"associatedIndex\": 3\r\n}]]></component>\r\n  <component name=\"ProjectId\" id=\"2ZEJskbo6BBqxVnvwQq90ftROGn\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"onboarding.tips.debug.path\": \"C:/JAVA/HomeWorkPro/src/main/java/de/telran/Main.java\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"324fa954-5c3f-4087-b8d7-2e90e8ac4e30\" name=\"Changes\" comment=\"\" />\r\n      <created>1701981518379</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1701981518379</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/de/telran/Main.java</url>\r\n          <line>15</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a64edbf88747ecb660a73b2b0a24a24b0a6169a9)
++++ b/.idea/workspace.xml	(date 1702066999144)
+@@ -4,32 +4,100 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="" />
++    <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="sdcfsdcfwdfwefwefq">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw000/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw000/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw001/task1/AbstractProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw001/task1/AbstractProduct.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw001/task2/AbstractBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw001/task2/AbstractBook.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="PUSH_TAGS">
++      <GitPushTagMode>
++        <option name="argument" value="--tags" />
++        <option name="title" value="All" />
++      </GitPushTagMode>
++    </option>
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="master" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 3
+-}]]></component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 3
++}</component>
+   <component name="ProjectId" id="2ZEJskbo6BBqxVnvwQq90ftROGn" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "master",
+-    "onboarding.tips.debug.path": "C:/JAVA/HomeWorkPro/src/main/java/de/telran/Main.java"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
++    &quot;onboarding.tips.debug.path&quot;: &quot;C:/JAVA/HomeWorkPro/src/main/java/de/telran/Main.java&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+   }
+-}]]></component>
++}</component>
++  <component name="RecentsManager">
++    <key name="CreateClassDialog.RecentsKey">
++      <recent name="de.telran.hw001.task1" />
++    </key>
++  </component>
++  <component name="RunManager" selected="Application.Main">
++    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="de.telran.hw000.Main" />
++      <module name="HomeWorkPro" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="de.telran.hw000.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Product" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="de.telran.hw001.task1.Product" />
++      <module name="HomeWorkPro" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="de.telran.hw001.task1.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.Main" />
++        <item itemvalue="Application.Product" />
++      </list>
++    </recent_temporary>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -40,6 +108,10 @@
+       <updated>1701981518379</updated>
+     </task>
+     <servers />
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="sdcfsdcfwdfwefwefq" />
++    <option name="LAST_COMMIT_MESSAGE" value="sdcfsdcfwdfwefwefq" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+Index: src/main/java/de/telran/hw001/task1/AbstractProduct.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package de.telran.hw001.task1;public class AbstractProduct {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/de/telran/hw001/task1/AbstractProduct.java b/src/main/java/de/telran/hw001/task1/AbstractProduct.java
+--- a/src/main/java/de/telran/hw001/task1/AbstractProduct.java	(revision a64edbf88747ecb660a73b2b0a24a24b0a6169a9)
++++ b/src/main/java/de/telran/hw001/task1/AbstractProduct.java	(date 1701985171468)
+@@ -1,2 +1,158 @@
+-package de.telran.hw001.task1;public class AbstractProduct {
++package de.telran.hw001.task1;
++
++public abstract class AbstractProduct {
++
++    abstract void addToArray(Product[] products);
++    abstract void removeFromArray(Product[] products);
++
++}
++abstract class AbstractDatabaseOperation{
++    abstract void searchInArray(Product[] products, String query);
++    abstract void updateArray(Product[] products, Product product);
++}
++
++interface IArrayProcessing{
++    void sortArray(Product[] products);
++    void filterArray(Product[] products, String criteria);
++}
++interface IProductManagement{
++    void addProduct(Product product);
++    void removeProduct(Product product);
++}
++//================================================================
++class FoodProduct extends AbstractProduct{
++
++    @Override
++    void addToArray(Product[] products) {
++
++    }
++
++    @Override
++    void removeFromArray(Product[] products) {
++
++    }
++
++    void calculateExpiration(Product[] products) {
++
++    }
++
++    void applyDiscount(Product[] products, double discount) {
++
++    }
++}
++class NonFoodProduct extends AbstractProduct{
++
++    @Override
++    void addToArray(Product[] products) {
++
++    }
++
++    @Override
++    void removeFromArray(Product[] products) {
++
++    }
++
++    void checkWarranty(Product[] products) {
++
++    }
++
++    void updatePrice(Product[] products, double price) {
++
++    }
++}
++class ProductDatabase extends AbstractDatabaseOperation implements IArrayProcessing,IProductManagement {
++
++    @Override
++    void searchInArray(Product[] products, String query) {
++
++    }
++
++    @Override
++    void updateArray(Product[] products, Product product) {
++
++    }
++
++    @Override
++    public void sortArray(Product[] products) {
++
++    }
++
++    @Override
++    public void filterArray(Product[] products, String criteria) {
++
++    }
++
++    @Override
++    public void addProduct(Product product) {
++
++    }
++
++    @Override
++    public void removeProduct(Product product) {
++
++    }
++
++    void backupDatabase(Product[] products) {
++
++    }
++
++    void restoreDatabase(Product[] products) {
++
++    }
++}
++
++class ProductAnalytics implements IArrayProcessing{
++
++    @Override
++    public void sortArray(Product[] products) {
++
++    }
++
++    @Override
++    public void filterArray(Product[] products, String criteria) {
++
++    }
++    void calculateAveragePrice(Product[] products){
++
++    }
++    void findMostPopularProduct(Product[] products){
++
++    }
++}
++class InventoryManagement implements IProductManagement{
++
++    @Override
++    public void addProduct(Product product) {
++
++    }
++
++    @Override
++    public void removeProduct(Product product) {
++
++    }
++    void countProducts(Product[] products){
++
++    }
++    void listExpiredProducts(Product[] products){
++
++    }
++}
++class SpecialOfferProduct extends NonFoodProduct{
++    void addSpecialOffer(Product[] products, SpecialOffer offer){
++
++    }
++    void removeSpecialOffer(Product[] products, SpecialOffer offer){
++
++    }
++}
++
++class Product {
++    public static void main(String[] args) {
++        FoodProduct foodProduct = new FoodProduct();
++        NonFoodProduct nonFoodProduct = new NonFoodProduct();
++    }
++}
++
++class SpecialOffer {
++    //
+ }
