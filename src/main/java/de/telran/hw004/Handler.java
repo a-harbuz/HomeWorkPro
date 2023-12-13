@@ -57,11 +57,11 @@ public class Handler {
         return empReturn;
     }
     //5) Описание: Возвращает счета, баланс которых выше определённой суммы.
-    public Account[] filterAccountsByBalance(Account[] accounts, BigDecimal minBalance){
+    public static Account[] filterAccountsByBalance(Account[] accounts, BigDecimal minBalance){
         ArrayList<Account> tmpAccount = new ArrayList<>();
         for (int i = 0; i < accounts.length; i++) {
             // Сравнение BigDecimal
-            if (accounts[i].getBalance() > minBalance){
+            if (accounts[i].getBalance().compareTo(minBalance) ==1 ){
                 tmpAccount.add(accounts[i]);
             }
         }
