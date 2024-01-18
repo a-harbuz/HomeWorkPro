@@ -16,7 +16,7 @@ public class Main {
 
         generate();
         play();
-        showMap();
+        //showMap();
 
         //teamMax();
         //System.out.println(Handler.sumValue());
@@ -25,6 +25,10 @@ public class Main {
         //middleAge();
         //moreThanMiddle();
         //onlyOneCategory();
+        //whoWin();
+
+        //soYung();
+        soExpiriens();
 
     }
 

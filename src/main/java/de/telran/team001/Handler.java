@@ -54,7 +54,7 @@ public class Handler {
     }
 
     //================================================================================================
-    //Найти команду с максимальными баллами:
+    //Найти команду с максимальными баллами: ++
     public static void teamMax(){
         Optional<Map.Entry<Team, Double>> maxEntry = resultGamesMap.entrySet().stream()
                 .max(Map.Entry.comparingByValue());
@@ -78,7 +78,7 @@ public class Handler {
                 .filter(x->x.getValue().equals(0.0))
                 .forEach(x->System.out.println(x.getKey().getTeamName() + " : " + x.getValue()));
     }
-    //Средний возраст участников в каждой команде:
+    //Средний возраст участников в каждой команде: ++
     public static void middleAge(){
         System.out.println("Средний возраст участников в каждой команде: ");
         for (Map.Entry<Team,Double> m : resultGamesMap.entrySet()){
@@ -101,16 +101,16 @@ public class Handler {
 
     //Команды с баллами выше среднего: ++
     public static void moreThanMiddle(){
-        //ищем общ бал, делим на кол-во, сравниваем со средним
         double resSum = resultGamesMap.entrySet().stream()
                 .collect(Collectors.averagingDouble(x-> x.getValue()));
         System.out.println("Средний балл: "+resSum);
+
         resultGamesMap.entrySet().stream()
                 .filter(x -> x.getValue() > resSum)
                 .forEach(x->System.out.println(x.getKey().getTeamName() + " : " + x.getValue()));
     }
 
-    //Сортировка команд по баллам:
+    //Сортировка команд по баллам: ++
     public static void teamSortedByPunkte(){
         //Sort Map by Value
         resultGamesMap.entrySet().stream()
@@ -128,24 +128,57 @@ public class Handler {
     }
 
     //Команды с победами над определенной командой: Определить команды, которые выиграли
-    //у заданной команды.
-    public static void whoWin(Team secondTeam){
+    //у заданной команды. ++
+    public static void whoWin(Team secondTeam) {
         //Team.List<UkogoViigrali>.stream
         //streamList - >фильтр(UkogoViigrali==secondTeam)
+        resultGamesMap.keySet().stream()
+                .map(x -> x.getIamWinList().stream())
+                .forEach(System.out::println);
 
     }
 
     //Самый молодой участник среди всех команд:
     public static void soYung(){
-        //составить список Участник.Имя=возраст
-        //найти минимум
+        double age= Double.MAX_VALUE;
+        for (Map.Entry<Team,Double> m : resultGamesMap.entrySet()){
+            List<Participant> lst1 = m.getKey().getParticipantList();
+            for (int i = 0; i < lst1.size(); i++) {
+                if (lst1.get(i).getAge()<age) age=lst1.get(i).getAge();
+            }
+        }
+        System.out.println("Minimal Age: " + age);
 
-        //resultGamesMap.entrySet().stream()
-        //.filter(x->x.getKey().getGroup().equals(GroupTeams.ADULT))
-        //.forEach(x->System.out.println(x.getKey().getTeamName() + " : " + x.getKey().getGroup()));
+//        resultGamesMap.keySet().stream()
+//                .flatMap(x -> x.getParticipantList().stream())
+//                .forEach(System.out::println);
+
     }
 
     //Самая опытная команда: Определить команду с наибольшим суммарным возрастом участников.
+    public static void soExpiriens() {
+        Map<Team<Participant>,Integer> sumAge = new HashMap<>();
+        for (Map.Entry<Team, Double> m : resultGamesMap.entrySet()) {
+            List<Participant> lst1 = m.getKey().getParticipantList();
+            int age = 0;
+            for (Participant participant: lst1) {
+                age+=participant.getAge();
+            }
+            sumAge.put(m.getKey(), age);
+        }
+
+        int maxAge = Integer.MIN_VALUE;
+        Team<Participant> maxTeam = new Team<>();
+        for (Map.Entry<Team<Participant>,Integer> m : sumAge.entrySet()) {
+            if (m.getValue()>maxAge) {
+                maxAge=m.getValue();
+                maxTeam=m.getKey();
+            }
+        }
+        System.out.println("Max Age: " + maxAge);
+        System.out.println("MaxAge Team: " + maxTeam.getTeamName());
+    }
+
     //составить список Команда=ср.возраст
     //найти максимум
 
