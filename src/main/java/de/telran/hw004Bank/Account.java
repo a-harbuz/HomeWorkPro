@@ -1,4 +1,4 @@
-package de.telran.hw004;
+package de.telran.hw004Bank;
 
 import java.math.BigDecimal;
 public class Account {

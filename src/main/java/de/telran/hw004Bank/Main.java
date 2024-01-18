@@ -1,7 +1,6 @@
-package de.telran.hw004;
+package de.telran.hw004Bank;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Arrays;
 public class Main {
     Bank bank = new Bank();

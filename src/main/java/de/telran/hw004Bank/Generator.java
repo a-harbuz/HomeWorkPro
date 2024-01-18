@@ -1,4 +1,4 @@
-package de.telran.hw004;
+package de.telran.hw004Bank;
 
 import com.github.javafaker.Faker;
 import lombok.experimental.UtilityClass;

@@ -1,4 +1,4 @@
-package de.telran.hw002;
+package de.telran.hw002Books;
 import lombok.*;
 
 @Getter

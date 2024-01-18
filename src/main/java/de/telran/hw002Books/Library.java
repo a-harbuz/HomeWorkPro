@@ -1,23 +1,26 @@
-package de.telran.hw002;
+package de.telran.hw002Books;
 import lombok.*;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
-@AllArgsConstructor
+//@AllArgsConstructor
 public class Library {
     private String address;
     private long bookNumbers;
-    private Book[] books;
+    //private Book[] books;
+    private List<Book> books;
 
-    public void Library(String address, long bookNumbers, Book[] books) {
+    public Library(String address, long bookNumbers, List<Book> books) {
         this.address = address;
         this.bookNumbers = bookNumbers;
         this.books = books;
     }
+
 
     public String getAddress() {
         return address;
@@ -27,7 +30,10 @@ public class Library {
         return bookNumbers;
     }
 
-    public Book[] getBooks() {
+//    public Book[] getBooks() {
+//        return List<books>;
+//    }
+    public List<Book> getBooks() {
         return books;
     }
 
@@ -40,7 +46,7 @@ public class Library {
         return "Library{" +
                 "address='" + address + '\'' +
                 ", bookNumbers=" + bookNumbers +
-                ", books=" + Arrays.toString(books) +
+                ", books=" + Arrays.toString(new List[]{books}) +
                 '}';
     }
 

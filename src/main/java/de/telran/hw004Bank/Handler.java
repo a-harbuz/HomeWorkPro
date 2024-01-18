@@ -1,4 +1,4 @@
-package de.telran.hw004;
+package de.telran.hw004Bank;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -65,13 +65,25 @@ public class Handler {
                 tmpAccount.add(accounts[i]);
             }
         }
-
-        Account[] accReturn = new Account[tmpAccount.size()];
-        for (int i = 0; i < tmpAccount.size(); i++) {
-            accReturn[i] = tmpAccount.get(i);
-        }
-        return accReturn;
-
+        return (Account[]) tmpAccount.toArray();
+//        Account[] accReturn = new Account[tmpAccount.size()];
+//        for (int i = 0; i < tmpAccount.size(); i++) {
+//            accReturn[i] = tmpAccount.get(i);
+//        }
+//        return accReturn;
+//        public static Account[] filterAccountsByBalance(Account[] accounts, BigDecimal minBalance) {
+//            int countFilter = 0;
+//            Account[] newAccounts = new Account[accounts.length];
+//            for (Account account : accounts) {
+//                if (account.getBalance().compareTo(minBalance) > 0) {
+//                    for (int j = 0; j < newAccounts.length; j++) {
+//                        newAccounts[j] = account;
+//                        countFilter++;
+//                    }
+//                }
+//            }
+//            return Arrays.copyOf(newAccounts, countFilter);
+//        }
     }
 
     /**

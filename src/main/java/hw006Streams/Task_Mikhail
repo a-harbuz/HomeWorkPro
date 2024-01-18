@@ -1,0 +1,80 @@
+Строки (Strings):
+
+1. Задача: Фильтрация списка строк по длине.
+Сигнатура: List<String> filterByLength(List<String> input, int length);
+
+2. Задача: Преобразование всех строк в верхний регистр.
+Сигнатура: List<String> toUpperCase(List<String> input);
+
+3. Задача: Поиск первой строки, начинающейся на заданную букву.
+Сигнатура: Optional<String> findFirstStartingWith(List<String> input, char letter);
+
+4. Задача: Соединение строк через запятую.
+Сигнатура: String joinByComma(List<String> input);
+
+5. Задача: Подсчёт количества строк, содержащих заданный символ.
+Сигнатура: long countContainingChar(List<String> input, char ch);
+
+Целые числа (Integers):
+6. Задача: Найти сумму всех чисел в списке.
+Сигнатура: int sumOfList(List<Integer> input);
+
+7. Задача: Получить список квадратов чисел.
+Сигнатура: List<Integer> getSquares(List<Integer> input);
+
+8. Задача: Фильтрация чисел, больших заданного значения.
+Сигнатура: List<Integer> filterGreaterThan(List<Integer> input, int minValue);
+
+9. Задача: Проверка, содержит ли список заданное число.
+Сигнатура: boolean containsNumber(List<Integer> input, int number);
+
+10. Задача: Найти максимальное число в списке.
+Сигнатура: Optional<Integer> findMax(List<Integer> input);
+
+Символы (Characters):
+11. Задача: Преобразование списка символов в список строк.
+Сигнатура: List<String> convertToStringList(List<Character> input);
+
+12. Задача: Фильтрация символов по ASCII-значению.
+Сигнатура: List<Character> filterByAsciiValue(List<Character> input, int ascii);
+
+13. Задача: Проверка, все ли символы в списке заглавные.
+Сигнатура: boolean areAllUpperCase(List<Character> input);
+
+14. Задача: Найти первый повторяющийся символ.
+Сигнатура: Optional<Character> findFirstDuplicate(List<Character> input);
+
+15. Задача: Получить обратный список символов.
+Сигнатура: List<Character> reverseList(List<Character> input);
+
+Числа с плавающей точкой (Floats):
+16. Задача: Найти минимальное число в списке.
+Сигнатура: Optional<Float> findMin(List<Float> input);
+
+17. Задача: Получить список чисел, умноженных на заданное число.
+Сигнатура: List<Float> multiplyBy(List<Float> input, float multiplier);
+
+18. Задача: Отфильтровать числа, меньшие заданного значения.
+Сигнатура: List<Float> filterLessThan(List<Float> input, float value);
+
+19. Задача: Проверить, содержит ли список отрицательные числа.
+Сигнатура: boolean containsNegative(List<Float> input);
+
+20. Задача: Округление всех чисел в списке до ближайшего целого.
+Сигнатура: List<Integer> roundNumbers(List<Float> input);
+
+Общие задачи для всех типов:**
+21. Задача: Найти количество уникальных элементов в списке.
+Сигнатура: <T> long countUnique(List<T> input);
+
+22. Задача: Определить, является ли список отсортированным.
+Сигнатура: <T extends Comparable<T>> boolean isSorted(List<T> input);
+
+23. Задача: Получить последний элемент списка, если он существует.
+Сигнатура: <T> Optional<T> getLastElement(List<T> input);
+
+24. Задача: Перемешать элементы списка.
+Сигнатура: <T> List<T> shuffleList(List<T> input);
+
+25. Задача: Подсчитать частоту каждого элемента в списке.
+Сигнатура: <T> Map<T, Long> countFrequency(List<T> input);

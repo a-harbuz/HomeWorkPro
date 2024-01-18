@@ -1,6 +1,6 @@
-package de.telran.hw004;
+package de.telran.hw004Bank;
 
-enum Citezenship {
+enum Country {
     FRANCE,
     GERMANY,
     POLAND,
