@@ -4,45 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw002Books/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw002Books/Handler1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw002Books/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw005Enum/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw005Enum/WearSize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Adult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Generator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/GroupTeams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Participant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Team.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/task" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw006Streams/Exampl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw006Streams/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw006Streams/Task_Mikhail" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" />
+    <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="normal Team">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pro006generics/SimpleCalc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw002/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw002Books/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw002/Condition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw002Books/Condition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw002/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw002Books/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw002/Handler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw002/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw002Books/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw002/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004/Branch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Branch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004/Citezenship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Citezenship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Currency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004/Empl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Empl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Handler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Team.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,12 +82,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="de.telran.hw001.task3.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="de.telran.hw001.task3.Main" />
+    <configuration name="SimpleCalc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pro006generics.SimpleCalc" />
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.telran.hw001.task3.*" />
+          <option name="PATTERN" value="pro006generics.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -169,10 +137,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.SimpleCalc" />
         <item itemvalue="Application.hw006Streams.Main" />
         <item itemvalue="Application.de.telran.hw005Enum.Main" />
         <item itemvalue="Application.de.telran.hw004Bank.Main" />
-        <item itemvalue="Application.de.telran.hw001.task3.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702500556018</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="normal Team">
+      <option name="closed" value="true" />
+      <created>1705579115745</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705579115747</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,7 +237,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="sdcfsdcfwdfwefwefq" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="normal Team" />
+    <option name="LAST_COMMIT_MESSAGE" value="normal Team" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

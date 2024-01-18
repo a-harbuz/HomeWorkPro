@@ -38,9 +38,12 @@ public class Handler {
             double result = 0;
             for (int j = i; j < teamsList.size(); j++) {
                 if (i!=j) {
-                    result+=teamsList.get(i).play(teamsList.get(j));
+                    double ball = teamsList.get(i).play(teamsList.get(j));
+                    result += ball;
+                    if (ball==1.0) teamsList.get(i).addiamWin(teamsList.get(j)); //Добавление команд у которых выиграли
                 }
             }
+            teamsList.get(i).setPunkte(result); //Добавление баллов в класс
             resultGamesMap.put(teamsList.get(i),result);
         }
     }
