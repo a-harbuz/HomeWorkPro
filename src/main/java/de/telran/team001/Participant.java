@@ -1,5 +1,10 @@
 package de.telran.team001;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Participant {
     private String name;
     private int age;
@@ -9,21 +14,6 @@ public class Participant {
         this.age = age;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     @Override
     public String toString() {
@@ -32,4 +22,8 @@ public class Participant {
                 ", age=" + age +
                 '}';
     }
+//    public static void tst() {
+//        Participant part1 = new Participant("Vasya", 25);
+//    }
+
 }

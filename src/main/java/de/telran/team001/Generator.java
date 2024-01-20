@@ -10,19 +10,20 @@ public class Generator {
     private static final Faker FAKER = new Faker();
     private static final Random RANDOM = new Random();
 
-    public static void generateTeams(List<List<Team>> listGroups) {
-        listGroups.add(generateGroupTeams(GroupTeams.PUPIL));
-        listGroups.add(generateGroupTeams(GroupTeams.TEENAGER));
-        listGroups.add(generateGroupTeams(GroupTeams.ADULT));
+    public static void generateTeams(List<List<Team<Participant>>> teamsList) {
+        //List<Team<Participant>> listGroups = new ArrayList<>();
+        teamsList.add(generateGroupTeams(GroupTeams.PUPIL));
+        teamsList.add(generateGroupTeams(GroupTeams.TEENAGER));
+        teamsList.add(generateGroupTeams(GroupTeams.ADULT));
     }
 
-    public static List<Team> generateGroupTeams(GroupTeams group) {
-        List<Team> list = new ArrayList<>();
+    public static List<Team<Participant>> generateGroupTeams(GroupTeams group) {
+        List<Team<Participant>> list = new ArrayList<>();
         int numTeams = 25;
         int numPerson = 4;
         for (int i = 0; i < numTeams; i++) {
             //Create One Team
-            Team team = new Team(FAKER.name().name(),group);
+            Team<Participant> team = new Team<Participant>(FAKER.name().name(),group);
             for (int j = 0; j < numPerson; j++) {
                 if (group.equals(GroupTeams.PUPIL)) {
                     Pupil participant = new Pupil(FAKER.name().name(), RANDOM.nextInt(8)+10);
@@ -43,7 +44,7 @@ public class Generator {
     }
 
 
-    public static void schowTeams(List<List<Team>> listGroups) {
+    public static void schowTeams(List<List<Team<Participant>>> listGroups) {
         int count=0;
 //        for (List<Team> teamsList: listGroups) {
 //            //===

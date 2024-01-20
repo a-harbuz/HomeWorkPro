@@ -10,13 +10,13 @@ import static de.telran.team001.Handler.*;
 public class Main {
     //private static final Faker FAKER = new Faker();
     //private static final Random RANDOM = new Random();
-    //private static List<List<Team>> groupTeams = new ArrayList<>();
+    private static final List<List<Team<Participant>>> groupTeamsList = new ArrayList<>(); // All Commands
 
     public static void main(String[] args) {
 
-        generate();
-        play();
-        //showMap();
+        Generator.generateTeams(groupTeamsList);
+        Handler.play(groupTeamsList);
+        showTeams(groupTeamsList);
 
         //teamMax();
         //System.out.println(Handler.sumValue());
@@ -28,7 +28,7 @@ public class Main {
         //whoWin();
 
         //soYung();
-        soExpiriens();
+        //soExpiriens();
 
     }
 

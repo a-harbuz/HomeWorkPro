@@ -1,20 +1,26 @@
 package de.telran.team001;
+import de.telran.myexeptions.*;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class Handler {
-    private static List<List<Team>> groupTeams = new ArrayList<>(); // All Commands
+
     private static Map<Team, Double> resultGamesMap = new LinkedHashMap<>(); // All Results
 
-    public static void generate(){
-        Generator.generateTeams(groupTeams);
-        //Generator.schowTeams(groupTeams);
+    public static void main(String[] args) {
+//        List<Integer> lst = Arrays.asList(1,2,3,4,5);
+//        lst.stream()
+//                .min(Comparator.comparingInt(el-> el));
     }
-    public static void play(){
+
+    public static void play(List<List<Team<Participant>>> teamsList){
         //Commands play in each Group
         //Если победа то присуждается 1 балл, если ничья 0,5, если проигрыш то 0.
-        for (List<Team> teamsList: groupTeams) {
-            playInGroup(teamsList);
+        for (int i = 0; i < teamsList.size(); i++) {
+            List<Team<Participant>> lt = teamsList.get(i); // => list teams
+            playInGroup(lt);
+            //playInGroup(null);
         }
 
         //Sort Map by Value
@@ -32,7 +38,10 @@ public class Handler {
 
         //showMap();
     }
-    public static void playInGroup(List<Team> teamsList){
+    public static void playInGroup(List<Team<Participant>> teamsList){
+        if (teamsList.isEmpty()){
+            throw new TeamNotBeEmpty("Team not be null");
+        }
         //plays in one Group
         for (int i = 0; i < teamsList.size(); i++) {
             double result = 0;
@@ -53,6 +62,11 @@ public class Handler {
                 .forEach(x->System.out.println(x.getKey().getTeamName() + " : " + x.getValue()));
     }
 
+    public static void showTeams(List<List<Team<Participant>>> teamsList){
+        teamsList.stream()
+                .flatMap(Collection::stream)
+                .forEach(x->System.out.println(x.getTeamName() + " : " + x.getPunkte()));
+    }
     //================================================================================================
     //Найти команду с максимальными баллами: ++
     public static void teamMax(){
@@ -149,9 +163,23 @@ public class Handler {
         }
         System.out.println("Minimal Age: " + age);
 
-//        resultGamesMap.keySet().stream()
-//                .flatMap(x -> x.getParticipantList().stream())
-//                .forEach(System.out::println);
+
+//        resultGamesMap.keySet()
+//                .stream()
+//                .flatMap(team -> team.getParticipantList().stream())
+//                .min(Comparator.comparingInt(Participant::getAge)).stream()
+
+//        List<Participant> part = resultGamesMap.keySet()
+//                .stream()
+//                .flatMap(team -> team.getParticipantList().stream())
+//                .peek(System.out::println)
+//                .toList();
+//                .map(Participant::getAge)
+//                .toList()
+//                .stream()
+//                .min(Integer::compareTo);
+
+
 
     }
 
