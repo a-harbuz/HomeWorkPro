@@ -16,19 +16,20 @@ public class Main {
 
         Generator.generateTeams(groupTeamsList);
         Handler.play(groupTeamsList);
-        showTeams(groupTeamsList);
+        //showTeams(groupTeamsList);
 
-        //teamMax();
-        //System.out.println(Handler.sumValue());
-
+        teamMax(groupTeamsList);
+        //sumValue();
         //noPoints();
         //middleAge();
         //moreThanMiddle();
+
         //onlyOneCategory();
         //whoWin();
 
         //soYung();
         //soExpiriens();
+        teamFromTo(10,11);
 
     }
 
