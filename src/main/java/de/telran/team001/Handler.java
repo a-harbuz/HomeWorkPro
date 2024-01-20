@@ -10,7 +10,7 @@ import static java.util.stream.Collectors.toMap;
 
 public class Handler {
 
-    private static Map<Team<Participant>, Double> resultGamesMap = new LinkedHashMap<>(); // All Results
+    private static final Map<Team<Participant>, Double> resultGamesMap = new LinkedHashMap<>(); // All Results
 
     public static void play(List<List<Team<Participant>>> teamsList){
         //Commands play in each Group
