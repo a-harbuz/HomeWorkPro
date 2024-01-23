@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
+import de.telran.myexeptions.ErrorMessages.*;
 import static java.util.stream.Collectors.toMap;
 
 public class Handler {
@@ -21,20 +21,50 @@ public class Handler {
             //List<Team<Participant>> tst = new ArrayList<>(); //empty List
             //playInGroup(tst);
         }
+        //У первой тройки лидеров результаты должны отличаться. Если первые 5 мест одинаковое кол-во баллов,
+        //то играют с одинаковыми баллами между собой, пока не определиться тройка лидеров.
 
         //Sort Map by Value
-        //Map<Team, Double> tempMap = resultGamesMap.entrySet().stream()
-        //.sorted(Map.Entry.<Team, Double>comparingByValue().reversed())
+        Map<Team<Participant>, Double> sortedMap = new LinkedHashMap<>();
+                sortedMap = resultGamesMap.entrySet().stream()
+                        .sorted(Map.Entry.<Team<Participant>, Double>comparingByValue().reversed())
+                        .limit(5)
+                        .collect(Collectors.toMap(
+                                Map.Entry::getKey,
+                                Map.Entry::getValue,
+                                (e1, e2) -> e1,
+                                LinkedHashMap::new
+                        ));
+        //System.out.println(sortedMap);
+        // Получение значения первого элемента
+        //Double firstValue = sortedMap.values().iterator().next();
+        //System.out.println(firstValue);
 
-        //.collect(toMap(Function.identity(), Team::));
-        //.collect(toMap(Function.identity(), String::length));
-        //.forEach(System.out::println);
+        // Проверка, что все значения одинаковы
+        //Если результат равен 1, то все значения одинаковы, и переменная allValuesEqual будет равна true,
+        // иначе она будет равна false.
+        //boolean allValuesEqual = sortedMap.values().stream().distinct().count() == 1;
+        if (sortedMap.values().stream().distinct().count() == 1) {
+            //System.out.println("Все 5 значений одинаковы");
+            Handler.play(teamsList);
+            return;
+        }
+
+        // Проверка, что в первых трех элементах есть повторяющиеся значения
+        // isDuplicatesInFirstThree = true, если есть повторяющиеся значения, иначе она будет равна false.
+        boolean isDuplicatesInFirstThree = sortedMap.entrySet().stream()
+                .limit(3)
+                .map(Map.Entry::getValue)
+                .distinct()
+                .count() < 3;
+        if (isDuplicatesInFirstThree) {
+            //System.out.println("3 значения не уникальны");
+            Handler.play(teamsList);
+            return;
+        }
 
         //У первой тройки лидеров результаты должны отличаться. Если первые 5 мест одинаковое кол-во баллов,
         //то играют с одинаковыми баллами между собой, пока не определиться тройка лидеров.
-        //checkResult(); //проверка первых 5 мест
-        //playInGroup(newList); //переиграть
-
     }
     public static void playInGroup(List<Team<Participant>> teamsList){
         if (teamsList.isEmpty()){
@@ -227,6 +257,9 @@ public class Handler {
 
     //Команды с участниками в определенном возрастном диапазоне:
     public static void teamFromTo(int a, int b) {
+        if (a<=0 || b>100) {
+            throw new NoValidRangeAge(ErrorMessages.AGE_MUST_BE_IN_RANGE);
+        }
 //        resultGamesMap.keySet().stream()
 //                    .flatMap(p->p.getParticipantList().stream())
 //                    .mapToInt(Participant::getAge)
@@ -243,23 +276,46 @@ public class Handler {
 
         System.out.println("Команды с участниками в определенном возрастном диапазоне:");
         resultGamesMap.keySet().stream()
-                .filter(team -> team.getParticipantList().stream()
-                        .anyMatch(participant -> (participant.getAge() >= a) && (participant.getAge() <= b)
-                        ))
+
+                .forEach(x-> System.out.println(x.getTeamName()+x.getParticipantList()));
                 //.peek(x-> System.out.println(x.getTeamName()+x.getParticipantList())
                 //.map(Team::getTeamName)
                 //.forEach(System.out::println);
                 // .forEach(el->{});
-                .forEach(x-> System.out.println(x.getTeamName()+x.getParticipantList()));
+
     }
 
 
     //Имена участников по убыванию возраста:
-        //составить список Команда.участники.имя=Команда.участники.возраст
-        //сортировка по возрасту
+    public static void participantsByAge() {
+        System.out.println("Имена участников по убыванию возраста:");
+        resultGamesMap.keySet().stream()
+                .flatMap(x->x.getParticipantList().stream())
+                .sorted((p1, p2) -> Integer.compare(p2.getAge(), p1.getAge()))
+                .forEach(x-> System.out.println(x.getName() + " : " + x.getAge()));
+    }
 
-//    Найти команду с наибольшим разбросом возрастов участников.
-//    Найти все пары команд, чьи участники имеют одинаковый суммарный возраст.
+    //    Найти команду с наибольшим разбросом возрастов участников.
+    public static void participantsByMaxDifferentAge() {
+
+    }
+    //    Найти все пары команд, чьи участники имеют одинаковый суммарный возраст.
+    public static void participantsByGleichAge() {
+        //Цикл в цикле стримами
+        resultGamesMap.keySet().stream().forEach(team1 ->
+                resultGamesMap.keySet().stream().forEach(team2 -> {
+                    if (team1 != team2) {
+                        int totalAgeTeam1 = team1.getParticipantList().stream().mapToInt(Participant::getAge).sum();
+                        int totalAgeTeam2 = team2.getParticipantList().stream().mapToInt(Participant::getAge).sum();
+
+                        if (totalAgeTeam1 == totalAgeTeam2) {
+                            System.out.println(team1.getTeamName() + "-" + totalAgeTeam1 +
+                                    " : " + team2.getTeamName() + "-" + totalAgeTeam2);
+                        }
+                    }
+                }
+                ));
+    }
 
 
 } // End of Class

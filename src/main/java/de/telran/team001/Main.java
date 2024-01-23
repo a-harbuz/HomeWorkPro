@@ -18,7 +18,7 @@ public class Main {
         Handler.play(groupTeamsList);
         //showTeams(groupTeamsList);
 
-        teamMax(groupTeamsList);
+        //teamMax(groupTeamsList);
         //sumValue();
         //noPoints();
         //middleAge();
@@ -29,7 +29,9 @@ public class Main {
 
         //soYung();
         //soExpiriens();
-        teamFromTo(10,11);
+        //teamFromTo(10,11);
+        //participantsByAge();
+        participantsByGleichAge();
 
     }
 
