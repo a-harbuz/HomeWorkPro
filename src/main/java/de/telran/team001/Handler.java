@@ -6,7 +6,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import de.telran.myexeptions.ErrorMessages.*;
-import static java.util.stream.Collectors.toMap;
 
 public class Handler {
 
@@ -36,14 +35,7 @@ public class Handler {
                                 LinkedHashMap::new
                         ));
         //System.out.println(sortedMap);
-        // Получение значения первого элемента
-        //Double firstValue = sortedMap.values().iterator().next();
-        //System.out.println(firstValue);
-
         // Проверка, что все значения одинаковы
-        //Если результат равен 1, то все значения одинаковы, и переменная allValuesEqual будет равна true,
-        // иначе она будет равна false.
-        //boolean allValuesEqual = sortedMap.values().stream().distinct().count() == 1;
         if (sortedMap.values().stream().distinct().count() == 1) {
             //System.out.println("Все 5 значений одинаковы");
             Handler.play(teamsList);
@@ -51,12 +43,12 @@ public class Handler {
         }
 
         // Проверка, что в первых трех элементах есть повторяющиеся значения
-        // isDuplicatesInFirstThree = true, если есть повторяющиеся значения, иначе она будет равна false.
         boolean isDuplicatesInFirstThree = sortedMap.entrySet().stream()
                 .limit(3)
                 .map(Map.Entry::getValue)
                 .distinct()
                 .count() < 3;
+        // isDuplicatesInFirstThree = true, если есть повторяющиеся значения, иначе она будет равна false.
         if (isDuplicatesInFirstThree) {
             //System.out.println("3 значения не уникальны");
             Handler.play(teamsList);
@@ -104,11 +96,6 @@ public class Handler {
     public static void teamMax(List<List<Team<Participant>>> teamsList){
         Optional<Map.Entry<Team<Participant>, Double>> maxEntry = resultGamesMap.entrySet().stream()
                 .max(Map.Entry.comparingByValue());
-//        teamsList.stream()
-//                .flatMap(Collection::stream)
-//                .mapToDouble(Team::getPunkte)
-//                .max()
-//                .orElse(Double.MIN_VALUE);
 
         System.out.print("Команда с максимальными баллами: ");
         System.out.println(maxEntry.get().getKey().getTeamName() + " : " + maxEntry.get().getValue());
@@ -133,23 +120,10 @@ public class Handler {
     //Средний возраст участников в каждой команде: ++
     public static void middleAge(){
         System.out.println("Средний возраст участников в каждой команде: ");
-//        for (Map.Entry<Team<Participant>,Double> m : resultGamesMap.entrySet()){
-//            List<Participant> lst1 = m.getKey().getParticipantList();
-//            double sum=0.0;
-//            for (int i = 0; i < lst1.size(); i++) {
-//                sum+=lst1.get(i).getAge();
-//            }
-//            System.out.println(m.getKey().getTeamName() + " : MidlAge - " + sum/lst1.size());
-//        }
-
-//        Double avg = resultGamesMap.keySet().stream() //stream Teams
-//                .flatMap(t -> t.getParticipantList().stream()) //stream Participant
-//                .collect(Collectors.averagingInt(Participant::getAge)); //Получили средний балл всех участников
-
         for (Map.Entry<Team<Participant>,Double> m : resultGamesMap.entrySet()) {
             Double avg = m.getKey().getParticipantList().stream()
                     .collect(Collectors.averagingInt(Participant::getAge)); //Получили средний балл участников в команде
-            System.out.println(avg);
+            System.out.println(m.getKey().getTeamName()+" : "+avg);
         }
 
     }
@@ -213,7 +187,7 @@ public class Handler {
         System.out.println("Minimal Age: " + age);
     }
 
-    //Самая опытная команда: Определить команду с наибольшим суммарным возрастом участников.
+    //Самая опытная команда: Определить команду с наибольшим суммарным возрастом участников. ++
     public static void soExpiriens() {
 //        Map<Team<Participant>,Integer> sumAge = new HashMap<>();
 //        for (Map.Entry<Team<Participant>, Double> m : resultGamesMap.entrySet()) {
@@ -266,27 +240,33 @@ public class Handler {
 //                    .filter(x->(x>=a) && (x<=b))
 //                    .forEach(System.out::println);
 
-//        Optional<String> teamName = resultGamesMap.keySet().stream()
-//                .filter(team -> team.getParticipantList().stream()
-//                        .anyMatch(participant -> (participant.getAge() >= a) && (participant.getAge() <= b)
-//                        ))
-//                .map(Team::getTeamName)
-//                .findFirst();
-//        System.out.println(teamName.get());
-
         System.out.println("Команды с участниками в определенном возрастном диапазоне:");
-        resultGamesMap.keySet().stream()
+        Optional<String> teamName = resultGamesMap.keySet().stream()
+                .filter(team -> team.getParticipantList().stream()
+                        .anyMatch(participant -> (participant.getAge() >= a) && (participant.getAge() <= b)
+                        ))
+                .map(Team::getTeamName)
+                .findFirst();
+        System.out.println(teamName);
 
-                .forEach(x-> System.out.println(x.getTeamName()+x.getParticipantList()));
-                //.peek(x-> System.out.println(x.getTeamName()+x.getParticipantList())
+
+//        resultGamesMap.keySet().stream()
+//                .filter(x -> x.getParticipantList().stream()
+//                        .mapToInt(Participant::getAge)
+//                        .filter(age->(age>=a && age<=b))
+//                .forEach(t->{
+//                    System.out.println(x.getTeamName()+x.getParticipantList());
+//                        };
+//                );
+
+
                 //.map(Team::getTeamName)
-                //.forEach(System.out::println);
                 // .forEach(el->{});
 
     }
 
 
-    //Имена участников по убыванию возраста:
+    //Имена участников по убыванию возраста: ++
     public static void participantsByAge() {
         System.out.println("Имена участников по убыванию возраста:");
         resultGamesMap.keySet().stream()
@@ -295,11 +275,12 @@ public class Handler {
                 .forEach(x-> System.out.println(x.getName() + " : " + x.getAge()));
     }
 
-    //    Найти команду с наибольшим разбросом возрастов участников.
+    //Найти команду с наибольшим разбросом возрастов участников.
     public static void participantsByMaxDifferentAge() {
-
+        //???????
     }
-    //    Найти все пары команд, чьи участники имеют одинаковый суммарный возраст.
+
+    //Найти все пары команд, чьи участники имеют одинаковый суммарный возраст. ++
     public static void participantsByGleichAge() {
         //Цикл в цикле стримами
         resultGamesMap.keySet().stream().forEach(team1 ->
@@ -316,6 +297,15 @@ public class Handler {
                 }
                 ));
     }
+
+    //Вычислить средний балл для команд в каждой категории участников (Adult, Teenager, Pupil).
+
+    //Найти команды, чьи баллы улучшались с каждой игрой.
+
+    //Выявить команды, которые не имеют проигрышей.
+    //Список команд, которые имели ничейные результаты с заданной командой.
+    //Вывести результаты всех игр между двумя конкретными командами.
+    //Сравнить две команды по средним баллам и среднему возрасту участников.
 
 
 } // End of Class
