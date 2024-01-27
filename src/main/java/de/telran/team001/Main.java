@@ -17,6 +17,7 @@ public class Main {
         Generator.generateTeams(groupTeamsList);
         Handler.play(groupTeamsList);
         //showTeams(groupTeamsList);
+        //showResultGameMap();
 
         //teamMax(groupTeamsList);
         //sumValue();
@@ -31,7 +32,9 @@ public class Main {
         //soExpiriens();
         //teamFromTo(10,11);
         //participantsByAge();
-        participantsByGleichAge();
+        //participantsByGleichAge();
+        teamFromTo(10,13);
+
 
     }
 

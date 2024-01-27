@@ -10,8 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="normal Team">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw007StreamsAndWriteToFile/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/temp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706012208843</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="normal Team">
+      <option name="closed" value="true" />
+      <created>1706296387432</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706296387432</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

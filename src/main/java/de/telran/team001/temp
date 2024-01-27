@@ -1,0 +1,17 @@
+//Inside Stream
+
+//        resultGamesMap.keySet().stream()
+//                    .flatMap(p->p.getParticipantList().stream())
+//                    .mapToInt(Participant::getAge)
+//                    .filter(x->(x>=a) && (x<=b))
+//                    .forEach(System.out::println);
+
+//Outside Stream
+        System.out.println("Команды с участниками в определенном возрастном диапазоне ("+a+"-"+b+") age:");
+        resultGamesMap.keySet().stream()
+                .filter(team -> team.getParticipantList().stream()
+                        .anyMatch(participant -> (participant.getAge() >= a) && (participant.getAge() <= b)
+                        ))
+                //.map(Team::getTeamName)
+                .forEach(x->System.out.println(x.getTeamName()));
+==============================================================================================================
