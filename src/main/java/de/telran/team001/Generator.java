@@ -44,21 +44,4 @@ public class Generator {
     }
 
 
-    public static void schowTeams(List<List<Team<Participant>>> listGroups) {
-        int count=0;
-//        for (List<Team> teamsList: listGroups) {
-//            //===
-//            for (int i = 0; i < teamsList.size(); i++) {
-//                count++;
-//                System.out.println("Team №"+count+": " + teamsList.get(i).getTeamName());
-//                System.out.println("Team №"+count+": " + teamsList.get(i).getGroup());
-//                for (Object s: teamsList.get(i).getParticipantList()) {
-//                    System.out.println(s);
-//                }
-//            }
-//            //===
-//        }
-    }
-
-
 }

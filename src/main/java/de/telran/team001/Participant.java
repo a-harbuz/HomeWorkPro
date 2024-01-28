@@ -22,8 +22,6 @@ public class Participant {
                 ", age=" + age +
                 '}';
     }
-//    public static void tst() {
-//        Participant part1 = new Participant("Vasya", 25);
-//    }
+
 
 }

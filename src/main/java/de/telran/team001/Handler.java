@@ -2,10 +2,7 @@ package de.telran.team001;
 import de.telran.myexeptions.*;
 
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import de.telran.myexeptions.ErrorMessages.*;
 
 public class Handler {
 
@@ -58,7 +55,7 @@ public class Handler {
         // isDuplicatesInFirstThree = true, если есть повторяющиеся значения, иначе она будет равна false.
         if (isDuplicatesInFirstThree) {
             //System.out.println("3 значения не уникальны");
-            Handler.play(teamsList);
+            Handler.play(teamsList); //recursion
             return;
         }
 //        while (isDuplicatesInFirstThree){
@@ -70,17 +67,27 @@ public class Handler {
         if (teamsList.isEmpty()){
             //throw new TeamNotBeEmpty("Team not be null");
             throw new TeamNotBeEmpty(ErrorMessages.PARAM_MUST_BE_NOT_NULL);
-            //throw new ParameterAIsMustBeNotFiveException(ErrorMessages.PARAM_MUST_BE_NOT_NULL);
         }
         //plays in one Group
         for (int i = 0; i < teamsList.size(); i++) {
             double result = 0;
+            int winnersCount = 0;
             for (int j = i; j < teamsList.size(); j++) {
                 if (i!=j) {
                     double ball = teamsList.get(i).play(teamsList.get(j));
                     result += ball;
                     //!!!
-                    if (ball==1.0) teamsList.get(i).addiamWin(teamsList.get(j)); //Добавление команд у которых выиграли
+                    //Добавление в МАПУ команд с которыми играли, с результатом игры
+                    teamsList.get(i).addiamWinMap(teamsList.get(j), ball);
+                    if (ball==1.0) {
+                        winnersCount++;
+                    } else {
+                        if (winnersCount > teamsList.get(i).getWinnersCount()) {
+                            //Записываем новую победную серию, если она больше старой
+                            teamsList.get(i).setWinnersCount(winnersCount);
+                        }
+                        winnersCount=0;
+                    }
                 }
             }
             //!!!
@@ -165,14 +172,15 @@ public class Handler {
                 .forEach(x->System.out.println(x.getKey().getTeamName() + " : " + x.getKey().getGroup()));
     }
 
-    //Команды с победами над определенной командой: Определить команды, которые выиграли
-    //у заданной команды. ++
+    //Команды с победами над определенной командой: ++
+    //Определить команды, которые выиграли у заданной команды. ++
     public static void whoWin() {
-        //Team.List<UkogoViigrali>.stream
-        //streamList - >фильтр(UkogoViigrali==secondTeam)
         resultGamesMap.keySet().stream()
-                .map(x -> x.getIamWinList().stream())
-                .forEach(System.out::println);
+                .flatMap(x->x.getIamWinMap().entrySet().stream()) //the MAP inside Team
+                .filter(score->score.getValue()==0.0) //текущая команда проиграла этой
+                .forEach(y->{
+                    System.out.println(y.getKey()); //выводим кто победил у текущей
+                });
     }
 
     //Самый молодой участник среди всех команд: ++
@@ -266,14 +274,16 @@ public class Handler {
 
     //Найти команду с наибольшим разбросом возрастов участников.
     public static void participantsByMaxDifferentAge() {
-        //???????
+        //Team-Participant->find min & max => разброс=max-min;
+        //складывать в мапу - Team:разброс
+        //поиск макс. разброса
     }
 
     //Найти все пары команд, чьи участники имеют одинаковый суммарный возраст. ++
     public static void participantsByGleichAge() {
         //Цикл в цикле стримами
-        resultGamesMap.keySet().stream().forEach(team1 ->
-                resultGamesMap.keySet().stream().forEach(team2 -> {
+        resultGamesMap.keySet().forEach(team1 ->
+                resultGamesMap.keySet().forEach(team2 -> {
                     if (team1 != team2) {
                         int totalAgeTeam1 = team1.getParticipantList().stream().mapToInt(Participant::getAge).sum();
                         int totalAgeTeam2 = team2.getParticipantList().stream().mapToInt(Participant::getAge).sum();
@@ -288,12 +298,61 @@ public class Handler {
     }
 
     //Вычислить средний балл для команд в каждой категории участников (Adult, Teenager, Pupil).
+    public static void groupAveragingScore() {
+        //key-> groupingBy (Team::getGroup, && value -> averaging)
+        Map<GroupTeams, Double> result = resultGamesMap.keySet().stream()
+                .collect(Collectors.groupingBy(Team::getGroup, Collectors.averagingDouble(Team::getPunkte)));
+        System.out.println(result);
+    }
 
-    //Найти команды, чьи баллы улучшались с каждой игрой.
+    //Найти команды, чьи баллы улучшались с каждой игрой. *****
+    public static void besserEachPlay() {
+        //????
+    }
 
-    //Выявить команды, которые не имеют проигрышей.
-    //Список команд, которые имели ничейные результаты с заданной командой.
-    //Вывести результаты всех игр между двумя конкретными командами.
+    //Выявить команды, которые не имеют проигрышей. ++
+    public static void noLossTeam() {
+        System.out.println("команды, которые не имеют проигрышей:");
+        resultGamesMap.keySet().forEach(
+                x->{
+                    if (x.getIamWinMap().values().stream().anyMatch(score -> score != 0)){
+                        System.out.println(x.getTeamName());
+                    }
+                }
+        );
+    }
+
+    //Список команд, которые имели ничейные результаты с заданной командой. ++
+    public static void teamsDrawWithTeam(String nameTeam2) {
+        System.out.println("Список команд, которые имели ничейные результаты с заданной командой:");
+        resultGamesMap.keySet().forEach(
+                x->{
+                    x.getIamWinMap().forEach((key, value) -> {
+                        if (key.getTeamName().equals(nameTeam2) && (value == 0.5)) {
+                            System.out.println(x.getTeamName());
+                        }
+                    });
+                }
+        );
+    }
+
+    //Вывести результаты всех игр между двумя конкретными командами. ++
+    public static void resultTeamWithTeam(String nameTeam1, String nameTeam2) {
+        System.out.println("Результаты всех игр между двумя конкретными командами:");
+        //стрим в стриме (мапа в мапе)
+        resultGamesMap.keySet().stream()
+                .filter(t1->t1.getTeamName().equals(nameTeam1))
+                .forEach(x->{
+                    x.getIamWinMap().forEach((key, value) -> { //стрим результатов игр с заданной командой
+                        if (key.getTeamName().equals(nameTeam2)) {
+                            System.out.println(value); //печатаем результат игры
+                        }
+                    });
+                }
+        );
+    }
+
+
     //Сравнить две команды по средним баллам и среднему возрасту участников.
 
     //Найти команды, в которых все участники имеют уникальные имена.
@@ -301,9 +360,24 @@ public class Handler {
     //Найти команды с наибольшим количеством ничьих результатов.
     //Выявить команды, которые показали наибольшее улучшение баллов к концу сезона.
 
-    //Создать комплексный отчет, включающий средний возраст команды, общее количество баллов,
-    //наибольшую победную серию, и сравнение с другими командами.
+    //Создать комплексный отчет, включающий средний возраст команды, общее количество баллов, ++
+    //наибольшую победную серию, и сравнение с другими командами. ++
+    public static void complexReport() {
+        List<TeamsComplexReport> teamsComplexReports = new ArrayList<>();
+        resultGamesMap.entrySet().stream()
+                .forEach(t->{
+                        teamsComplexReports.add(
+                                new TeamsComplexReport(t.getKey().getTeamName(),
+                                        t.getKey().getParticipantList().stream().collect(Collectors.averagingDouble(Participant::getAge)),
+                                        t.getValue(),t.getKey().getWinnersCount()));
+                    }
+                    );
 
+        //сравнение по наибольшей победной серии
+        teamsComplexReports.stream()
+                .sorted(Comparator.comparingInt(TeamsComplexReport::getWinnersCount).reversed())
+                .forEach(System.out::println);
+    }
 
 } // End of Class
 

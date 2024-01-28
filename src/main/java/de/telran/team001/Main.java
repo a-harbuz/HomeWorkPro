@@ -33,7 +33,12 @@ public class Main {
         //teamFromTo(10,11);
         //participantsByAge();
         //participantsByGleichAge();
-        teamFromTo(10,13);
+        //teamFromTo(10,13);
+
+        //complexReport();
+        //groupAveragingScore();
+
+        noLossTeam();
 
 
     }

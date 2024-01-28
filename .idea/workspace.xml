@@ -10,11 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="normal Team">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw007StreamsAndWriteToFile/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/temp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw008binary/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/TeamsComplexReport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Generator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Handler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Participant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/task" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/task" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/temp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/temp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleCalc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pro006generics.SimpleCalc" />
+    <configuration name="de.telran.hw000.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw000.Main" />
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pro006generics.*" />
+          <option name="PATTERN" value="de.telran.hw000.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="de.telran.hw000.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="de.telran.hw000.Main" />
+    <configuration name="de.telran.hw008binary.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw008binary.Main" />
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.telran.hw000.*" />
+          <option name="PATTERN" value="de.telran.hw008binary.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,10 +146,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.de.telran.hw008binary.Main" />
         <item itemvalue="Application.Handler" />
         <item itemvalue="Application.de.telran.hw000.Main" />
         <item itemvalue="Application.de.telran.testTryCatch.Main" />
-        <item itemvalue="Application.SimpleCalc" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706296387432</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="normal Team">
+      <option name="closed" value="true" />
+      <created>1706389841317</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1706389841318</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

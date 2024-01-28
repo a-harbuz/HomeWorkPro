@@ -15,3 +15,36 @@
                 //.map(Team::getTeamName)
                 .forEach(x->System.out.println(x.getTeamName()));
 ==============================================================================================================
+как хранить ключи и значения, если ключи могут совпадать
+ChatGPT
+Если ключи могут совпадать, то использование структуры данных, поддерживающей множественные значения
+для одного ключа, является подходящим вариантом. В Java для этого можно использовать Map<K, List<V>> или Map<K, Set<V>>,
+в зависимости от того, нужно ли вам допускать дублирование значений.
+
+Использование List:
+java
+Copy code
+Map<String, List<Integer>> mapWithList = new HashMap<>();
+
+// Добавление значений
+mapWithList.computeIfAbsent("key1", k -> new ArrayList<>()).add(1);
+mapWithList.computeIfAbsent("key1", k -> new ArrayList<>()).add(2);
+
+// Получение значений
+List<Integer> valuesForKey1 = mapWithList.get("key1");
+System.out.println(valuesForKey1); // Выведет: [1, 2]
+Использование Set:
+java
+Copy code
+Map<String, Set<Integer>> mapWithSet = new HashMap<>();
+
+// Добавление значений
+mapWithSet.computeIfAbsent("key1", k -> new HashSet<>()).add(1);
+mapWithSet.computeIfAbsent("key1", k -> new HashSet<>()).add(2);
+
+// Получение значений
+Set<Integer> valuesForKey1 = mapWithSet.get("key1");
+System.out.println(valuesForKey1); // Выведет: [1, 2]
+Выбор между List и Set зависит от того, нужно ли вам сохранять упорядоченный список значений
+для каждого ключа (List) или просто набор уникальных значений (Set).
+==============================================================================================================
