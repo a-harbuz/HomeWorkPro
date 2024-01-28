@@ -205,30 +205,7 @@ public class Handler {
 
     //Самая опытная команда: Определить команду с наибольшим суммарным возрастом участников. ++
     public static void soExpiriens() {
-//        Map<Team<Participant>,Integer> sumAge = new HashMap<>();
-//        for (Map.Entry<Team<Participant>, Double> m : resultGamesMap.entrySet()) {
-//            List<Participant> lst1 = m.getKey().getParticipantList();
-//            int age = 0;
-//            for (Participant participant: lst1) {
-//                age+=participant.getAge();
-//            }
-//            sumAge.put(m.getKey(), age);
-//        }
-//
-//        int maxAge = Integer.MIN_VALUE;
-//        Team<Participant> maxTeam = new Team<>();
-//        for (Map.Entry<Team<Participant>,Integer> m : sumAge.entrySet()) {
-//            if (m.getValue()>maxAge) {
-//                maxAge=m.getValue();
-//                maxTeam=m.getKey();
-//            }
-//        }
-//        System.out.println("Max Age: " + maxAge);
-//        System.out.println("MaxAge Team: " + maxTeam.getTeamName());
-
-        //составить список Команда=ср.возраст
-        //найти максимум
-
+        //Ищем суммарный возраст участников в комманде
         Map<Team<Participant>, Integer> mapSumAge = new LinkedHashMap<>();
         for (Map.Entry<Team<Participant>,Double> m : resultGamesMap.entrySet()) {
             Integer sum = m.getKey().getParticipantList().stream()
@@ -237,7 +214,8 @@ public class Handler {
             //System.out.println(sum);
             mapSumAge.put(m.getKey(), sum);
         }
-            Double age = mapSumAge.values().stream()
+        //Определяем больший суммарный возраст
+        Double age = mapSumAge.values().stream()
                 .mapToDouble(el->el)
                 .max()
                 .orElse(Double.MIN_VALUE);
@@ -257,7 +235,6 @@ public class Handler {
                 .filter(team -> team.getParticipantList().stream()
                         .anyMatch(participant -> (participant.getAge() >= a) && (participant.getAge() <= b)
                         ))
-                //.map(Team::getTeamName)
                 .forEach(x->System.out.println(x.getTeamName()));
 
     }
@@ -272,7 +249,7 @@ public class Handler {
                 .forEach(x-> System.out.println(x.getName() + " : " + x.getAge()));
     }
 
-    //Найти команду с наибольшим разбросом возрастов участников.
+    //Найти команду с наибольшим разбросом возрастов участников. ??
     public static void participantsByMaxDifferentAge() {
         //Team-Participant->find min & max => разброс=max-min;
         //складывать в мапу - Team:разброс
@@ -297,7 +274,7 @@ public class Handler {
                 ));
     }
 
-    //Вычислить средний балл для команд в каждой категории участников (Adult, Teenager, Pupil).
+    //Вычислить средний балл для команд в каждой категории участников (Adult, Teenager, Pupil). ++
     public static void groupAveragingScore() {
         //key-> groupingBy (Team::getGroup, && value -> averaging)
         Map<GroupTeams, Double> result = resultGamesMap.keySet().stream()
@@ -305,7 +282,7 @@ public class Handler {
         System.out.println(result);
     }
 
-    //Найти команды, чьи баллы улучшались с каждой игрой. *****
+    //Найти команды, чьи баллы улучшались с каждой игрой. ***** ??
     public static void besserEachPlay() {
         //????
     }
@@ -360,7 +337,7 @@ public class Handler {
     //Найти команды с наибольшим количеством ничьих результатов.
     //Выявить команды, которые показали наибольшее улучшение баллов к концу сезона.
 
-    //Создать комплексный отчет, включающий средний возраст команды, общее количество баллов, ++
+    //Создать комплексный отчет, включающий средний возраст команды, общее количество баллов,
     //наибольшую победную серию, и сравнение с другими командами. ++
     public static void complexReport() {
         List<TeamsComplexReport> teamsComplexReports = new ArrayList<>();
