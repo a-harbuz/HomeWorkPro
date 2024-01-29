@@ -20,7 +20,6 @@ public class Handler {
         //то играют с одинаковыми баллами между собой, пока не определиться тройка лидеров.
 
         //Sort Map by Value
-        Map<Team<Participant>, Double> checkMap = new LinkedHashMap<>();
         resultGamesMap = resultGamesMap.entrySet().stream()
                         .sorted(Map.Entry.<Team<Participant>, Double>comparingByValue().reversed())
                         .collect(Collectors.toMap(
@@ -29,29 +28,22 @@ public class Handler {
                                 (e1, e2) -> e1,
                                 LinkedHashMap::new
                         ));
-        checkMap = resultGamesMap.entrySet().stream()
-                .sorted(Map.Entry.<Team<Participant>, Double>comparingByValue().reversed())
-                .limit(5)
-                .collect(Collectors.toMap(
-                        Map.Entry::getKey,
-                        Map.Entry::getValue,
-                        (e1, e2) -> e1,
-                        LinkedHashMap::new
-                ));
         //System.out.println(sortedMap);
+
         // Проверка, что все значения одинаковы
-        if (checkMap.values().stream().distinct().count() == 1) {
+        if (resultGamesMap.values().stream().limit(5).distinct().count() == 1) {
             //System.out.println("Все 5 значений одинаковы");
             Handler.play(teamsList);
             return;
         }
 
-        // Проверка, что в первых трех элементах есть повторяющиеся значения
-        boolean isDuplicatesInFirstThree = checkMap.entrySet().stream()
-                .limit(3)
+        // Проверка, что в первых четырех элементах есть повторяющиеся значения
+        // т.е. 3 первых места - должны остаться уникалными
+        boolean isDuplicatesInFirstThree = resultGamesMap.entrySet().stream()
+                .limit(4)
                 .map(Map.Entry::getValue)
                 .distinct()
-                .count() < 3;
+                .count() < 4;
         // isDuplicatesInFirstThree = true, если есть повторяющиеся значения, иначе она будет равна false.
         if (isDuplicatesInFirstThree) {
             //System.out.println("3 значения не уникальны");
@@ -97,8 +89,7 @@ public class Handler {
     }
 
     public static void showResultGameMap(){
-        resultGamesMap.entrySet().stream()
-                .forEach(x->System.out.println(x.getKey().getTeamName() + " : " + x.getValue()));
+        resultGamesMap.forEach((key, value) -> System.out.println(key.getTeamName() + " : " + value));
     }
 
     public static void showTeams(List<List<Team<Participant>>> teamsList){
@@ -185,15 +176,6 @@ public class Handler {
 
     //Самый молодой участник среди всех команд: ++
     public static void soYung(){
-//        double age= Double.MAX_VALUE;
-//        for (Map.Entry<Team<Participant>,Double> m : resultGamesMap.entrySet()){
-//            List<Participant> lst1 = m.getKey().getParticipantList();
-//            for (int i = 0; i < lst1.size(); i++) {
-//                if (lst1.get(i).getAge()<age) age=lst1.get(i).getAge();
-//            }
-//        }
-//        System.out.println("Minimal Age: " + age);
-
           double age = resultGamesMap.keySet().stream() //stream Teams
                 .flatMap(t -> t.getParticipantList().stream()) //stream Participant
                 .mapToDouble(Participant::getAge)
@@ -230,7 +212,6 @@ public class Handler {
         }
 
         System.out.println("Команды с участниками в определенном возрастном диапазоне ("+a+"-"+b+") age:");
-        //Optional<String> teamName =
         resultGamesMap.keySet().stream()
                 .filter(team -> team.getParticipantList().stream()
                         .anyMatch(participant -> (participant.getAge() >= a) && (participant.getAge() <= b)

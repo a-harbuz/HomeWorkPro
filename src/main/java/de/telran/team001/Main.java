@@ -17,7 +17,7 @@ public class Main {
         Generator.generateTeams(groupTeamsList);
         Handler.play(groupTeamsList);
         //showTeams(groupTeamsList);
-        //showResultGameMap();
+        showResultGameMap();
 
         //teamMax(groupTeamsList);
         //sumValue();
@@ -38,7 +38,7 @@ public class Main {
         //complexReport();
         //groupAveragingScore();
 
-        noLossTeam();
+        //noLossTeam();
 
 
     }
