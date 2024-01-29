@@ -39,22 +39,20 @@ public class Handler {
 
         // Проверка, что в первых четырех элементах есть повторяющиеся значения
         // т.е. 3 первых места - должны остаться уникалными
-        boolean isDuplicatesInFirstThree = resultGamesMap.entrySet().stream()
+        boolean isDuplicatesInFirstFour = resultGamesMap.entrySet().stream()
                 .limit(4)
                 .map(Map.Entry::getValue)
                 .distinct()
                 .count() < 4;
-        // isDuplicatesInFirstThree = true, если есть повторяющиеся значения, иначе она будет равна false.
-        if (isDuplicatesInFirstThree) {
-            //System.out.println("3 значения не уникальны");
+        // isDuplicatesInFirst = true, если есть повторяющиеся значения, иначе она будет равна false.
+        if (isDuplicatesInFirstFour) {
+            //System.out.println("4 значения не уникальны");
             Handler.play(teamsList); //recursion
-            return;
+            //return;
         }
-//        while (isDuplicatesInFirstThree){
-//            Handler.play(teamsList);
-//        }
 
     }
+
     public static void playInGroup(List<Team<Participant>> teamsList){
         if (teamsList.isEmpty()){
             //throw new TeamNotBeEmpty("Team not be null");
