@@ -2,6 +2,7 @@ package de.telran.team001;
 import de.telran.myexeptions.*;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Handler {
@@ -98,67 +99,93 @@ public class Handler {
 
 //=========================================Statistic===============================================
     //Найти команду с максимальными баллами: ++
-    public static void teamMax(List<List<Team<Participant>>> teamsList){
-        Optional<Map.Entry<Team<Participant>, Double>> maxEntry = resultGamesMap.entrySet().stream()
-                .max(Map.Entry.comparingByValue());
-
-        System.out.print("Команда с максимальными баллами: ");
-        System.out.println(maxEntry.get().getKey().getTeamName() + " : " + maxEntry.get().getValue());
-
+//    public static void teamMax(List<List<Team<Participant>>> teamsList){
+//        Map.Entry<Team<Participant>, Double> maxEntry = resultGamesMap.entrySet().stream()
+//                .max(Map.Entry.comparingByValue())
+//                .orElse(null);
+//
+//        System.out.print("Команда с максимальными баллами: ");
+//        System.out.println(maxEntry.getKey().getTeamName() + " : " + maxEntry.getValue());
+//
+//    }
+    public static Map.Entry<Team<Participant>, Double> teamMax(Map<Team<Participant>, Double> inputMap){
+        return inputMap.entrySet().stream()
+                .max(Map.Entry.comparingByValue())
+                .orElse(null);
     }
 
     //Подсчет общего количества баллов: ++
-    public static void sumValue(){
-        Double s = resultGamesMap.values().stream()
+    public static Double sumValue(){
+        return resultGamesMap.values().stream()
                 .mapToDouble(Double::doubleValue)
                 .sum();
-        System.out.println("Всего баллов: " + s);
+        //System.out.println("Всего баллов: " + s);
     }
 
     //Список команд без баллов: ++
-    public static void noPoints(){
-        System.out.println("Список команд без баллов: ");
-        resultGamesMap.entrySet().stream()
+    public static Map<Team<Participant>, Double> noPoints(){
+//        System.out.println("Список команд без баллов: ");
+//        resultGamesMap.entrySet().stream()
+//                .filter(x->x.getValue().equals(0.0))
+//                .forEach(x->System.out.println(x.getKey().getTeamName() + " : " + x.getValue()));
+        return resultGamesMap.entrySet().stream()
                 .filter(x->x.getValue().equals(0.0))
-                .forEach(x->System.out.println(x.getKey().getTeamName() + " : " + x.getValue()));
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
     //Средний возраст участников в каждой команде: ++
-    public static void middleAge(){
-        System.out.println("Средний возраст участников в каждой команде: ");
-        for (Map.Entry<Team<Participant>,Double> m : resultGamesMap.entrySet()) {
-            Double avg = m.getKey().getParticipantList().stream()
-                    .collect(Collectors.averagingInt(Participant::getAge)); //Получили средний балл участников в команде
-            System.out.println(m.getKey().getTeamName()+" : "+avg);
-        }
-
+    public static Map<Team<Participant>, Double> middleAge(){
+//        System.out.println("Средний возраст участников в каждой команде: ");
+//        for (Map.Entry<Team<Participant>,Double> m : resultGamesMap.entrySet()) {
+//            double avg;
+//            avg = m.getKey().getParticipantList().stream()
+//                    .collect(Collectors.averagingInt(Participant::getAge)); //Получили средний балл участников в команде
+//            System.out.println(m.getKey().getTeamName()+" : "+avg);
+//        }
+        return resultGamesMap.keySet().stream()
+                .collect(Collectors.toMap(t->t, t->{
+                    return t.getParticipantList().stream()
+                            .collect(Collectors.averagingDouble(Participant::getAge));
+                }));
     }
 
     //Команды с баллами выше среднего: ++
-    public static void moreThanMiddle(){
+    public static List<Team<Participant>> moreThanMiddle(){
         double resSum = resultGamesMap.entrySet().stream()
-                .collect(Collectors.averagingDouble(x-> x.getValue()));
+                .collect(Collectors.averagingDouble(Map.Entry::getValue));
         System.out.println("Средний балл: "+resSum);
 
-        resultGamesMap.entrySet().stream()
+//        resultGamesMap.entrySet().stream()
+//                .filter(x -> x.getValue() > resSum)
+//                .forEach(x->System.out.println(x.getKey().getTeamName() + " : " + x.getValue()));
+        return resultGamesMap.entrySet().stream()
                 .filter(x -> x.getValue() > resSum)
-                .forEach(x->System.out.println(x.getKey().getTeamName() + " : " + x.getValue()));
+                .map(Map.Entry::getKey)
+                .toList();
     }
 
     //Сортировка команд по баллам: ++
-    public static void teamSortedByPunkte(){
+    public static LinkedHashMap<Team<Participant>, Double> teamSortedByPoint(){
         //Sort Map by Value
-        resultGamesMap.entrySet().stream()
+//        resultGamesMap.entrySet().stream()
+//                .sorted(Map.Entry.<Team<Participant>, Double>comparingByValue().reversed())
+//                .forEach(System.out::println);
+        return resultGamesMap.entrySet().stream()
                 .sorted(Map.Entry.<Team<Participant>, Double>comparingByValue().reversed())
-                .forEach(System.out::println);
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (e1, e2) -> e1,
+                        LinkedHashMap::new
+                ));
     }
 
     //Команды с определенной категорией участников: Вывести команды, где все участники
     //принадлежат к одной категории (например, только Adult). ++
-    public static void onlyOneCategory(){
-        //фильтр, и перебор
-        resultGamesMap.entrySet().stream()
-                .filter(x->x.getKey().getGroup().equals(GroupTeams.ADULT))
-                .forEach(x->System.out.println(x.getKey().getTeamName() + " : " + x.getKey().getGroup()));
+    public static List<Team<Participant>> onlyOneCategory(){
+        return resultGamesMap.keySet().stream()
+                .filter(x -> x.getGroup().equals(GroupTeams.ADULT))
+                .collect(Collectors.toList());
+                //.forEach(x->System.out.println(x.getTeamName() + " : " + x.getGroup()));
     }
 
     //Команды с победами над определенной командой: ++
@@ -337,3 +364,19 @@ public class Handler {
 
 } // End of Class
 
+//смотрю....
+//        [15:17]
+//        сбрасываете winnersCount в ноль, даже если команда не
+//        выиграла следующий матч - зачем -> подсчет побед именно подряд !!!
+//            Результат максимальный на данный момент записывается перед этим в обьект,
+//            далее счетчик обнуляется для поска следующего максимума
+//        [15:18]
+//        collect(Collectors.averagingInt(Participant::getAge)) - а если список null?
+//        [15:18]
+//        teamMax - то же самое
+//        [15:18]
+//        soExpiriens, - результат вычисления где храниться?
+//        [15:19]
+//        complexReport - аналогично
+//        [15:19]
+//        а так хорошо

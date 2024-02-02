@@ -9,7 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="normal Team" />
+    <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="normal Team">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw010RegularAndStream/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw010RegularAndStream/Taski.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw008binary/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw008binary/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/team001/Handler.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +73,7 @@
       <recent name="de.telran.hw001.task1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Taski">
     <configuration name="Handler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="de.telran.team001.Handler" />
       <module name="HomeWorkPro" />
@@ -86,6 +93,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="de.telran.team001.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Taski" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw010RegularAndStream.Taski" />
+      <module name="HomeWorkPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.telran.hw010RegularAndStream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,26 +139,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="de.telran.testTryCatch.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="de.telran.testTryCatch.Main" />
-      <module name="HomeWorkPro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.telran.testTryCatch.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Taski" />
         <item itemvalue="Application.de.telran.hw008binary.Main" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Handler" />
         <item itemvalue="Application.de.telran.hw000.Main" />
-        <item itemvalue="Application.de.telran.testTryCatch.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +309,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706521625397</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="normal Team">
+      <option name="closed" value="true" />
+      <created>1706521644335</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1706521644336</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
