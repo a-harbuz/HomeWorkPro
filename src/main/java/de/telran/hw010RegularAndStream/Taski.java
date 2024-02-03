@@ -12,8 +12,8 @@ public class Taski {
         //System.out.println(map);
         //System.out.println(createSpecialMap());
 
-        //System.out.println(numTlf());
-        System.out.println(avgLenghtName());
+        System.out.println(numTlf());
+        //System.out.println(avgLenghtName());
     }
     public static Map<String, String> createStructure(){
         String path="C:\\JAVA\\HomeWorkPro\\src\\main\\java\\de\\telran\\hw010RegularAndStream\\1.txt";
@@ -43,7 +43,7 @@ public class Taski {
     }
 
 // - Метод для создания списка номеров телефонов, где каждый номер преобразован в числовой формат
-public static List<Integer> numTlf(){
+public static List<Long> numTlf(){
     //map<tlf,Names>
     return map.keySet().stream()
             .map(t->{
@@ -54,7 +54,7 @@ public static List<Integer> numTlf(){
                         .replace(")","").replace(".","");
                 //System.out.println(t);
                 //return Integer.parseInt(String.valueOf(new BigInteger(t)));
-                return Integer.parseInt("0");
+                return Long.parseLong(t);
             })
             .toList();
     //return null;
