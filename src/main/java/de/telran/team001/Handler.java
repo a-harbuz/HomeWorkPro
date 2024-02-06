@@ -96,7 +96,12 @@ public class Handler {
                 .flatMap(Collection::stream)
                 .forEach(x->System.out.println(x.getTeamName() + " : " + x.getPunkte()));
     }
-
+    public static void showParticipant(List<List<Team<Participant>>> teamsList){
+        teamsList.stream()
+                .flatMap(Collection::stream)
+                .flatMap(team -> team.getParticipantList().stream())
+                .forEach(p->System.out.println(p.getName() + " : " + p.getAge() + " : " + p.getCard()));
+    }
 //=========================================Statistic===============================================
     //Найти команду с максимальными баллами: ++
 //    public static void teamMax(List<List<Team<Participant>>> teamsList){

@@ -8,10 +8,12 @@ import lombok.Setter;
 public class Participant {
     private String name;
     private int age;
+    private CreditCard card;
 
-    public Participant(String name, int age) {
+    public Participant(String name, int age, CreditCard card) {
         this.name = name;
         this.age = age;
+        this.card = card;
     }
 
 

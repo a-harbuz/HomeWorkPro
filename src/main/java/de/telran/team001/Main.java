@@ -16,8 +16,10 @@ public class Main {
 
         Generator.generateTeams(groupTeamsList);
         Handler.play(groupTeamsList);
+
         //showTeams(groupTeamsList);
-        showResultGameMap();
+        showParticipant(groupTeamsList);
+        //showResultGameMap();
 
         //teamMax(groupTeamsList);
         //sumValue();
