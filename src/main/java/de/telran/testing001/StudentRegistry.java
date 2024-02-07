@@ -67,14 +67,18 @@ public class StudentRegistry {
     }
 
 //            getAverageGradeByMajor(String major) - вычисляет средний балл среди студентов определенной специальности.
-    public Map<Major, Double> getAverageGradeByMajor(String major) {
-
-        return null;
+    public Double getAverageGradeByMajor(String major) {
+        return studentsMap.values().stream()
+                .filter(x->x.getMajor()==Major.valueOf(major))
+                .collect(Collectors.averagingDouble(Student::getGrade));
+        //return null;
     }
 
 //            isStudentPresent(String email) - проверяет, существует ли студент с заданным email в реестре.
     public boolean isStudentPresent(String email) {
-        return false;
+        return studentsMap.values().stream()
+                .anyMatch(s->s.getEmail().equals(email));
+        //return false;
     }
 
 }

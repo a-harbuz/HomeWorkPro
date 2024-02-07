@@ -44,25 +44,35 @@ class StudentRegistryTest {
 
     @Test
     void listStudentsByYearTest() {
+        Assertions.assertEquals(1,studentRegistry.listStudentsByYear(2021).size());
     }
 
     @Test
     void getStudentTest() {
+        Assertions.assertEquals(1,studentRegistry.getStudent(1).size());
+        Assertions.assertEquals(Student.class,studentRegistry.getStudent(1).get(0).getClass());
+        Assertions.assertEquals("Vasya",studentRegistry.getStudent(1).get(0).getFirstName());
     }
 
     @Test
     void getTotalNumberOfStudentsTest() {
+        Assertions.assertEquals(2,studentRegistry.getTotalNumberOfStudents());
     }
 
     @Test
     void getStudentsWithGradeAboveTest() {
+        Assertions.assertEquals(1,studentRegistry.getStudentsWithGradeAbove(4.5).size());
+        Assertions.assertEquals("Vasya",studentRegistry.getStudentsWithGradeAbove(4.5).get(0).getFirstName());
     }
 
     @Test
     void getAverageGradeByMajorTest() {
+        Assertions.assertEquals(4.5,studentRegistry.getAverageGradeByMajor("COMPUTER_SCIENCE"));
     }
 
     @Test
-    void isStudentPresentTest() {
+    void isStudentByEmailPresentTest() {
+        assertTrue(studentRegistry.isStudentPresent("mail@email.com"));
+        assertFalse(studentRegistry.isStudentPresent("x@xx.xx"));
     }
 }

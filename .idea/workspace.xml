@@ -10,12 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="normal Team">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/my001mysql/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/testing001/Major.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/testing001/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/testing001/StudentRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/de/telran/testing001/StudentRegistryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/testing001/StudentRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/testing001/StudentRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/telran/testing001/StudentRegistryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/telran/testing001/StudentRegistryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +79,8 @@
       <recent name="de.telran.testing001" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StudentRegistryTest.calculateAverageGradeTest">
-    <configuration name="StudentRegistryTest.addStudentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.StudentRegistryTest">
+    <configuration name="StudentRegistryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
@@ -93,13 +90,28 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.telran.testing001" />
       <option name="MAIN_CLASS_NAME" value="de.telran.testing001.StudentRegistryTest" />
-      <option name="METHOD_NAME" value="addStudentTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentRegistryTest.getAverageGradeByMajorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HomeWorkPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.telran.testing001.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.telran.testing001" />
+      <option name="MAIN_CLASS_NAME" value="de.telran.testing001.StudentRegistryTest" />
+      <option name="METHOD_NAME" value="getAverageGradeByMajorTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentRegistryTest.calculateAverageGradeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentRegistryTest.getStudentsWithGradeAboveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
@@ -109,13 +121,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.telran.testing001" />
       <option name="MAIN_CLASS_NAME" value="de.telran.testing001.StudentRegistryTest" />
-      <option name="METHOD_NAME" value="calculateAverageGradeTest" />
+      <option name="METHOD_NAME" value="getStudentsWithGradeAboveTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentRegistryTest.findStudentsByMajor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentRegistryTest.getTotalNumberOfStudentsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
@@ -125,13 +137,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.telran.testing001" />
       <option name="MAIN_CLASS_NAME" value="de.telran.testing001.StudentRegistryTest" />
-      <option name="METHOD_NAME" value="findStudentsByMajor" />
+      <option name="METHOD_NAME" value="getTotalNumberOfStudentsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentRegistryTest.findStudentsByMajorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentRegistryTest.isStudentByEmailPresentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
@@ -141,23 +153,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.telran.testing001" />
       <option name="MAIN_CLASS_NAME" value="de.telran.testing001.StudentRegistryTest" />
-      <option name="METHOD_NAME" value="findStudentsByMajorTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StudentRegistryTest.removeStudentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HomeWorkPro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.telran.testing001.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.telran.testing001" />
-      <option name="MAIN_CLASS_NAME" value="de.telran.testing001.StudentRegistryTest" />
-      <option name="METHOD_NAME" value="removeStudentTest" />
+      <option name="METHOD_NAME" value="isStudentByEmailPresentTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StudentRegistryTest.calculateAverageGradeTest" />
-        <item itemvalue="JUnit.StudentRegistryTest.findStudentsByMajorTest" />
-        <item itemvalue="JUnit.StudentRegistryTest.removeStudentTest" />
-        <item itemvalue="JUnit.StudentRegistryTest.addStudentTest" />
-        <item itemvalue="JUnit.StudentRegistryTest.findStudentsByMajor" />
+        <item itemvalue="JUnit.StudentRegistryTest" />
+        <item itemvalue="JUnit.StudentRegistryTest.getAverageGradeByMajorTest" />
+        <item itemvalue="JUnit.StudentRegistryTest.isStudentByEmailPresentTest" />
+        <item itemvalue="JUnit.StudentRegistryTest.getStudentsWithGradeAboveTest" />
+        <item itemvalue="JUnit.StudentRegistryTest.getTotalNumberOfStudentsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -365,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707226447602</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="normal Team">
+      <option name="closed" value="true" />
+      <created>1707330142098</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1707330142098</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
