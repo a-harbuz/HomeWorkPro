@@ -1,4 +1,4 @@
-package de.telran.hw012Mackito;
+package de.telran.hw012Mockito;
 
 public class Book {
     private String id;

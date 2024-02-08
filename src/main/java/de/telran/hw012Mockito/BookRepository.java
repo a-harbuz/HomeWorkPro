@@ -1,4 +1,4 @@
-package de.telran.hw012Mackito;
+package de.telran.hw012Mockito;
 
 import java.util.List;
 import java.util.Optional;

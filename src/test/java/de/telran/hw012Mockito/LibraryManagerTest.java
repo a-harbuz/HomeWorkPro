@@ -1,7 +1,6 @@
-package de.telran.hw012Mackito;
+package de.telran.hw012Mockito;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
