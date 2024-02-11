@@ -57,7 +57,7 @@ class PaymentServiceTest {
     @Test
     void verifyPaymentTest() {
         boolean actualResult = paymentService.verifyPayment(Mockito.anyDouble());
-        Assertions.assertEquals(true,actualResult);
+        Assertions.assertTrue(actualResult);
         Mockito.verify(notificationService).sendPaymentNotification(Mockito.anyString());
 
     }
@@ -90,7 +90,7 @@ class PaymentServiceTest {
     @Test
     void schedulePaymentTest() {
         boolean actualResult = paymentService.schedulePayment(0.1,"date");
-        Assertions.assertEquals(true, actualResult);
+        Assertions.assertTrue(actualResult);
         Mockito.verify(notificationService).sendPaymentNotification(Mockito.anyString());
     }
 
