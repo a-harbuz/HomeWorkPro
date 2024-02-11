@@ -3,17 +3,20 @@ package de.telran.hw012Mockito;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @ExtendWith(MockitoExtension.class)
 class LibraryManagerTest {
+    //"dummy"
     private final BookRepository bookRepository = Mockito.mock(BookRepository.class); // Создаем фиктивный объект bookRepository, делаем заглушку
     private final LibraryManager libraryManager = new LibraryManager(bookRepository); //передали заглушку
     private final Book testBook = Mockito.mock(Book.class); //делаем заглушку для Книги
+    private final List<Book> listBook = Collections.singletonList(testBook); //делаем заглушку для List
+
     @Test
     void findBookByIdTest() {
         //пример - для понимания
@@ -81,36 +84,48 @@ class LibraryManagerTest {
     @Test
     void deleteBookTest() {
         libraryManager.deleteBook(Mockito.anyString()); //вызвали метод
-        Mockito.verify(bookRepository).deleteById(Mockito.anyString()); //проверили, реально ли метод вызвался
+        Mockito.verify(bookRepository).deleteById(Mockito.anyString()); //проверили, реально ли метод смог бы вызваться
     }
 
     @Test
     void updateBookTest() {
         Mockito.when(bookRepository.existsById(Mockito.anyString())).thenReturn(true);
 
-        libraryManager.updateBook(Mockito.anyString(), testBook); //вызвали метод
+        libraryManager.updateBook(Mockito.anyString(), testBook);
         Mockito.verify(bookRepository).save(testBook);
     }
     @Test
-    void updateBookWithException() {
+    void updateBookWithExceptionTest() {
         Assertions.assertThrows(IllegalArgumentException.class,()->libraryManager.updateBook("10", testBook));
         //Mockito.verify(bookRepository).save(testBook);
     }
 
     @Test
-    void findBooksByAuthor() {
+    void findBooksByAuthorTest() {
+        libraryManager.findBooksByAuthor(Mockito.anyString());
+        Mockito.verify(bookRepository).findByAuthor(Mockito.anyString());
     }
 
     @Test
-    void findBookByTitle() {
+    void findBookByTitleTest() {
+        libraryManager.findBookByTitle(Mockito.anyString());
+        Mockito.verify(bookRepository).findByTitle(Mockito.anyString());
     }
 
     @Test
-    void findBooksContainingTitle() {
+    void findBooksContainingTitleTest() {
+        Mockito.when(bookRepository.findContainingTitle(Mockito.anyString())).thenReturn(listBook);
+
+        libraryManager.findBooksContainingTitle(Mockito.anyString());
+        Mockito.verify(bookRepository).findContainingTitle(Mockito.anyString());
+
+        Assertions.assertEquals(1,libraryManager.findBooksContainingTitle(Mockito.anyString()).size());
     }
 
     @Test
-    void lendBook() {
+    void lendBookTest() {
+//        libraryManager.lendBook(Mockito.anyString(),Mockito.anyString());
+//        Mockito.verify(bookRepository,Mockito.times(2)).findById(Mockito.anyString());
     }
 
     @Test

@@ -10,7 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="normal Team">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw0013Mockito2/NotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw0013Mockito2/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw0013Mockito2/SimpleNotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw0013Mockito2/SimpleTransactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw0013Mockito2/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw0013Mockito2/TransactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/de/telran/hw0013Mockito2/PaymentServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/testing001/StudentRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/testing001/StudentRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/telran/hw012Mockito/LibraryManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/telran/hw012Mockito/LibraryManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/telran/testing001/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/telran/testing001/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/telran/testing001/StudentRegistryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/telran/testing001/StudentRegistryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,84 +85,87 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="de.telran.hw012Mockito" />
+      <recent name="de.telran.hw0013Mockito2" />
       <recent name="de.telran.hw012Mackito" />
       <recent name="de.telran.testing001" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LibraryManagerTest">
-    <configuration name="LibraryManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PaymentServiceTest">
+    <configuration name="PaymentServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.telran.hw012Mackito.*" />
+          <option name="PATTERN" value="de.telran.hw0013Mockito2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.telran.hw012Mackito" />
-      <option name="MAIN_CLASS_NAME" value="de.telran.hw012Mackito.LibraryManagerTest" />
+      <option name="PACKAGE_NAME" value="de.telran.hw0013Mockito2" />
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw0013Mockito2.PaymentServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentRegistryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentServiceTest.cancelPaymentNotRefundTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.telran.testing001.*" />
+          <option name="PATTERN" value="de.telran.hw0013Mockito2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.telran.testing001" />
-      <option name="MAIN_CLASS_NAME" value="de.telran.testing001.StudentRegistryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StudentRegistryTest.getAverageGradeByMajorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HomeWorkPro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.telran.testing001.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.telran.testing001" />
-      <option name="MAIN_CLASS_NAME" value="de.telran.testing001.StudentRegistryTest" />
-      <option name="METHOD_NAME" value="getAverageGradeByMajorTest" />
+      <option name="PACKAGE_NAME" value="de.telran.hw0013Mockito2" />
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw0013Mockito2.PaymentServiceTest" />
+      <option name="METHOD_NAME" value="cancelPaymentNotRefundTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentRegistryTest.getStudentsWithGradeAboveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentServiceTest.cancelPaymentRefundTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.telran.testing001.*" />
+          <option name="PATTERN" value="de.telran.hw0013Mockito2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.telran.testing001" />
-      <option name="MAIN_CLASS_NAME" value="de.telran.testing001.StudentRegistryTest" />
-      <option name="METHOD_NAME" value="getStudentsWithGradeAboveTest" />
+      <option name="PACKAGE_NAME" value="de.telran.hw0013Mockito2" />
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw0013Mockito2.PaymentServiceTest" />
+      <option name="METHOD_NAME" value="cancelPaymentRefundTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentRegistryTest.isStudentByEmailPresentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentServiceTest.freezeTransactionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.telran.testing001.*" />
+          <option name="PATTERN" value="de.telran.hw0013Mockito2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.telran.testing001" />
-      <option name="MAIN_CLASS_NAME" value="de.telran.testing001.StudentRegistryTest" />
-      <option name="METHOD_NAME" value="isStudentByEmailPresentTest" />
+      <option name="PACKAGE_NAME" value="de.telran.hw0013Mockito2" />
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw0013Mockito2.PaymentServiceTest" />
+      <option name="METHOD_NAME" value="freezeTransactionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentServiceTest.schedulePaymentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HomeWorkPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.telran.hw0013Mockito2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.telran.hw0013Mockito2" />
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw0013Mockito2.PaymentServiceTest" />
+      <option name="METHOD_NAME" value="schedulePaymentTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -159,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LibraryManagerTest" />
-        <item itemvalue="JUnit.StudentRegistryTest" />
-        <item itemvalue="JUnit.StudentRegistryTest.getAverageGradeByMajorTest" />
-        <item itemvalue="JUnit.StudentRegistryTest.isStudentByEmailPresentTest" />
-        <item itemvalue="JUnit.StudentRegistryTest.getStudentsWithGradeAboveTest" />
+        <item itemvalue="JUnit.PaymentServiceTest" />
+        <item itemvalue="JUnit.PaymentServiceTest.schedulePaymentTest" />
+        <item itemvalue="JUnit.PaymentServiceTest.freezeTransactionTest" />
+        <item itemvalue="JUnit.PaymentServiceTest.cancelPaymentNotRefundTest" />
+        <item itemvalue="JUnit.PaymentServiceTest.cancelPaymentRefundTest" />
       </list>
     </recent_temporary>
   </component>
@@ -383,7 +397,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707403859227</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="normal Team">
+      <option name="closed" value="true" />
+      <created>1707404259653</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1707404259653</updated>
+    </task>
+    <task id="LOCAL-00027" summary="normal Team">
+      <option name="closed" value="true" />
+      <created>1707404373900</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1707404373900</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

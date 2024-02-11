@@ -45,10 +45,11 @@ public class StudentRegistry {
 
 //
 //    getStudent(int id) - возвращает студента по его идентификатору.
-    public List<Student> getStudent(int id) {
+    public Student getStudent(int id) {
         return studentsMap.values().stream()
                 .filter(s->s.getId()==id)
-                .toList();
+                .findFirst()
+                .orElse(null);
         //return null;
     }
 
@@ -61,7 +62,7 @@ public class StudentRegistry {
 //    getStudentsWithGradeAbove(double grade) - возвращает список студентов, чей средний балл выше указанного.
     public List<Student> getStudentsWithGradeAbove(double grade) {
         return studentsMap.values().stream()
-                .filter(s->s.getGrade()==grade)
+                .filter(s->s.getGrade()>grade)
                 .toList();
         //return null;
     }
@@ -69,7 +70,7 @@ public class StudentRegistry {
 //            getAverageGradeByMajor(String major) - вычисляет средний балл среди студентов определенной специальности.
     public Double getAverageGradeByMajor(String major) {
         return studentsMap.values().stream()
-                .filter(x->x.getMajor()==Major.valueOf(major))
+                .filter(x->x.getMajor().equals(Major.valueOf(major)))
                 .collect(Collectors.averagingDouble(Student::getGrade));
         //return null;
     }

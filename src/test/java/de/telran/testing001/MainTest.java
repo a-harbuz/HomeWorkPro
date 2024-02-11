@@ -7,14 +7,14 @@ class Taski1Test {
     Taski1 taski1 = new Taski1();
 
     @Test
-    void additionalTest() {
+    void additionTwoArgumentsTest() {
         int actual = taski1.additional(8,12);
         int expected = 20;
         Assertions.assertEquals(expected,actual);
     }
 
     @Test
-    void subtractTest() {
+    void subtractTwoArgumentsTest() {
         int actual = taski1.subtract(12,8);
         int expected = 4;
         Assertions.assertEquals(expected,actual);

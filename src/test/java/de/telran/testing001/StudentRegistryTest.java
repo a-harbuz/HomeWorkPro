@@ -49,9 +49,8 @@ class StudentRegistryTest {
 
     @Test
     void getStudentTest() {
-        Assertions.assertEquals(1,studentRegistry.getStudent(1).size());
-        Assertions.assertEquals(Student.class,studentRegistry.getStudent(1).get(0).getClass());
-        Assertions.assertEquals("Vasya",studentRegistry.getStudent(1).get(0).getFirstName());
+        Assertions.assertEquals(Student.class,studentRegistry.getStudent(1).getClass());
+        Assertions.assertEquals("Vasya",studentRegistry.getStudent(1).getFirstName());
     }
 
     @Test
@@ -62,7 +61,7 @@ class StudentRegistryTest {
     @Test
     void getStudentsWithGradeAboveTest() {
         Assertions.assertEquals(1,studentRegistry.getStudentsWithGradeAbove(4.5).size());
-        Assertions.assertEquals("Vasya",studentRegistry.getStudentsWithGradeAbove(4.5).get(0).getFirstName());
+        Assertions.assertEquals("Petya",studentRegistry.getStudentsWithGradeAbove(4.5).get(0).getFirstName());
     }
 
     @Test
