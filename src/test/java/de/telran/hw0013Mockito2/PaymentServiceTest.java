@@ -32,19 +32,15 @@ class PaymentServiceTest {
     @Test
     void refundPaymentTest() {
         Mockito.when(transactionRepository.processTransaction(-Mockito.anyDouble())).thenReturn(true);
-
         paymentService.makePayment(Mockito.anyDouble());
         Mockito.verify(transactionRepository).processTransaction(Mockito.anyDouble());
         Mockito.verify(notificationService).sendPaymentNotification(Mockito.anyString());
-
-        //Mockito.verifyNoInteractions();
     }
 
     @Test
     void adjustPaymentTest() {
         //test1
         Mockito.when(transactionRepository.processTransaction(Mockito.anyDouble())).thenReturn(true).thenReturn(true);
-        //paymentService.adjustPayment(Mockito.anyDouble(),Mockito.anyDouble());
         paymentService.adjustPayment(0.1,0.2);
 
         Mockito.verify(transactionRepository,Mockito.times(2)).processTransaction(Mockito.anyDouble());
@@ -60,8 +56,10 @@ class PaymentServiceTest {
 
     @Test
     void verifyPaymentTest() {
-        boolean result = paymentService.verifyPayment(Mockito.anyDouble());
+        boolean actualResult = paymentService.verifyPayment(Mockito.anyDouble());
+        Assertions.assertEquals(true,actualResult);
         Mockito.verify(notificationService).sendPaymentNotification(Mockito.anyString());
+
     }
 
     @Test

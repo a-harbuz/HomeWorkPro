@@ -10,18 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="normal Team">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw0013Mockito2/NotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw0013Mockito2/PaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw0013Mockito2/SimpleNotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw0013Mockito2/SimpleTransactionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw0013Mockito2/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw0013Mockito2/TransactionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/de/telran/hw0013Mockito2/PaymentServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/testing001/StudentRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/testing001/StudentRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/telran/hw012Mockito/LibraryManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/telran/hw012Mockito/LibraryManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/telran/testing001/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/telran/testing001/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/telran/testing001/StudentRegistryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/telran/testing001/StudentRegistryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/telran/hw0013Mockito2/PaymentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/telran/hw0013Mockito2/PaymentServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +97,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentServiceTest.cancelPaymentNotRefundTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentServiceTest.adjustPaymentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
@@ -117,13 +107,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.telran.hw0013Mockito2" />
       <option name="MAIN_CLASS_NAME" value="de.telran.hw0013Mockito2.PaymentServiceTest" />
-      <option name="METHOD_NAME" value="cancelPaymentNotRefundTest" />
+      <option name="METHOD_NAME" value="adjustPaymentTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentServiceTest.cancelPaymentRefundTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentServiceTest.refundPaymentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
@@ -133,23 +123,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.telran.hw0013Mockito2" />
       <option name="MAIN_CLASS_NAME" value="de.telran.hw0013Mockito2.PaymentServiceTest" />
-      <option name="METHOD_NAME" value="cancelPaymentRefundTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PaymentServiceTest.freezeTransactionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HomeWorkPro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.telran.hw0013Mockito2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.telran.hw0013Mockito2" />
-      <option name="MAIN_CLASS_NAME" value="de.telran.hw0013Mockito2.PaymentServiceTest" />
-      <option name="METHOD_NAME" value="freezeTransactionTest" />
+      <option name="METHOD_NAME" value="refundPaymentTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -171,13 +145,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PaymentServiceTest.verifyPaymentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HomeWorkPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.telran.hw0013Mockito2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.telran.hw0013Mockito2" />
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw0013Mockito2.PaymentServiceTest" />
+      <option name="METHOD_NAME" value="verifyPaymentTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.PaymentServiceTest" />
+        <item itemvalue="JUnit.PaymentServiceTest.verifyPaymentTest" />
+        <item itemvalue="JUnit.PaymentServiceTest.adjustPaymentTest" />
+        <item itemvalue="JUnit.PaymentServiceTest.refundPaymentTest" />
         <item itemvalue="JUnit.PaymentServiceTest.schedulePaymentTest" />
-        <item itemvalue="JUnit.PaymentServiceTest.freezeTransactionTest" />
-        <item itemvalue="JUnit.PaymentServiceTest.cancelPaymentNotRefundTest" />
-        <item itemvalue="JUnit.PaymentServiceTest.cancelPaymentRefundTest" />
       </list>
     </recent_temporary>
   </component>
@@ -413,7 +403,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707404373900</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="normal Team">
+      <option name="closed" value="true" />
+      <created>1707690568567</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1707690568567</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
