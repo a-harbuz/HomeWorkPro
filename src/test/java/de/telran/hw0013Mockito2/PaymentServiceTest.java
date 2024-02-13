@@ -32,7 +32,7 @@ class PaymentServiceTest {
     @Test
     void refundPaymentTest() {
         Mockito.when(transactionRepository.processTransaction(-Mockito.anyDouble())).thenReturn(true);
-        paymentService.makePayment(Mockito.anyDouble());
+        paymentService.refundPayment(Mockito.anyDouble());
         Mockito.verify(transactionRepository).processTransaction(Mockito.anyDouble());
         Mockito.verify(notificationService).sendPaymentNotification(Mockito.anyString());
     }

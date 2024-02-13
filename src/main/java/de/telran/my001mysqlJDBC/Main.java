@@ -1,4 +1,4 @@
-package de.telran.my001mysql;
+package de.telran.my001mysqlJDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

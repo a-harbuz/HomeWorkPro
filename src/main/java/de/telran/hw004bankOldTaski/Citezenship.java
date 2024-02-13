@@ -1,4 +1,4 @@
-package de.telran.hw004Bank;
+package de.telran.hw004bankOldTaski;
 
 enum Citezenship {
     FRANCE,

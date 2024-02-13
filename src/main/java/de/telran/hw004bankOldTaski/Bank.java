@@ -1,4 +1,4 @@
-package de.telran.hw004Bank;
+package de.telran.hw004bankOldTaski;
 
 public class Bank {
     Branch[] branches;
