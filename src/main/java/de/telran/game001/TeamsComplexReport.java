@@ -1,4 +1,4 @@
-package de.telran.team001;
+package de.telran.game001;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

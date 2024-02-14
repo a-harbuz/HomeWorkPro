@@ -10,19 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="normal Team">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw013CodeSmells/Calc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw013CodeSmells/temp.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/de/telran/hw013CodeSmells/CalcI2Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/de/telran/hw013CodeSmells/CalcITest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004bankOldTaski/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004bankOldTaski/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Branch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004bankOldTaski/Branch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Citezenship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004bankOldTaski/Citezenship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004bankOldTaski/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004bankOldTaski/Currency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Empl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004bankOldTaski/Empl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004bankOldTaski/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004bankOldTaski/Handler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw004Bank/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw004bankOldTaski/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/my001mysql/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/my001mysqlJDBC/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Adult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/Adult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/CreditCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/GroupTeams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/GroupTeams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/Participant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/TeamsComplexReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/TeamsComplexReport.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,84 +87,87 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="de.telran.hw013CodeSmells" />
       <recent name="de.telran.hw0013Mockito2" />
       <recent name="de.telran.hw012Mockito" />
       <recent name="de.telran.hw012Mackito" />
       <recent name="de.telran.testing001" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PaymentServiceTest.refundPaymentTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="de.telran.my001mysqlJDBC.Main" />
+  <component name="RunManager" selected="JUnit.CalcITest">
+    <configuration name="CalcI2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.telran.my001mysqlJDBC.*" />
+          <option name="PATTERN" value="de.telran.hw013CodeSmells.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PaymentServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HomeWorkPro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.telran.hw0013Mockito2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.telran.hw0013Mockito2" />
-      <option name="MAIN_CLASS_NAME" value="de.telran.hw0013Mockito2.PaymentServiceTest" />
+      <option name="PACKAGE_NAME" value="de.telran.hw013CodeSmells" />
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw013CodeSmells.CalcI2Test" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentServiceTest.adjustPaymentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalcI2Test.calculateArea" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.telran.hw0013Mockito2.*" />
+          <option name="PATTERN" value="de.telran.hw013CodeSmells.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.telran.hw0013Mockito2" />
-      <option name="MAIN_CLASS_NAME" value="de.telran.hw0013Mockito2.PaymentServiceTest" />
-      <option name="METHOD_NAME" value="adjustPaymentTest" />
+      <option name="PACKAGE_NAME" value="de.telran.hw013CodeSmells" />
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw013CodeSmells.CalcI2Test" />
+      <option name="METHOD_NAME" value="calculateArea" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentServiceTest.refundPaymentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalcI2Test.calculateAreaNegativeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.telran.hw0013Mockito2.*" />
+          <option name="PATTERN" value="de.telran.hw013CodeSmells.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.telran.hw0013Mockito2" />
-      <option name="MAIN_CLASS_NAME" value="de.telran.hw0013Mockito2.PaymentServiceTest" />
-      <option name="METHOD_NAME" value="refundPaymentTest" />
+      <option name="PACKAGE_NAME" value="de.telran.hw013CodeSmells" />
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw013CodeSmells.CalcI2Test" />
+      <option name="METHOD_NAME" value="calculateAreaNegativeTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentServiceTest.verifyPaymentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalcITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.telran.hw0013Mockito2.*" />
+          <option name="PATTERN" value="de.telran.hw013CodeSmells.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.telran.hw0013Mockito2" />
-      <option name="MAIN_CLASS_NAME" value="de.telran.hw0013Mockito2.PaymentServiceTest" />
-      <option name="METHOD_NAME" value="verifyPaymentTest" />
+      <option name="PACKAGE_NAME" value="de.telran.hw013CodeSmells" />
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw013CodeSmells.CalcITest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalcITest.calculateAreaNegativeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HomeWorkPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.telran.hw013CodeSmells.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.telran.hw013CodeSmells" />
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw013CodeSmells.CalcITest" />
+      <option name="METHOD_NAME" value="calculateAreaNegativeTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -171,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PaymentServiceTest.refundPaymentTest" />
-        <item itemvalue="JUnit.PaymentServiceTest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.PaymentServiceTest.verifyPaymentTest" />
-        <item itemvalue="JUnit.PaymentServiceTest.adjustPaymentTest" />
+        <item itemvalue="JUnit.CalcITest" />
+        <item itemvalue="JUnit.CalcI2Test" />
+        <item itemvalue="JUnit.CalcI2Test.calculateAreaNegativeTest" />
+        <item itemvalue="JUnit.CalcI2Test.calculateArea" />
+        <item itemvalue="JUnit.CalcITest.calculateAreaNegativeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -435,7 +439,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707692476237</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="normal Team">
+      <option name="closed" value="true" />
+      <created>1707851028551</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1707851028551</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -470,5 +482,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HomeWorkPro$PaymentServiceTest.ic" NAME="PaymentServiceTest Coverage Results" MODIFIED="1707851622040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>de.telran.hw0013Mockito2.*</FILTER>
+    </SUITE>
   </component>
 </project>

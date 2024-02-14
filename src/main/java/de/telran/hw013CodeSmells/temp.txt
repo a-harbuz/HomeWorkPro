@@ -1,0 +1,13 @@
+//    public static void main(String[] args) {
+//        CalcI calcI = new CalcI();
+//        System.out.println(calcI.calculateArea(1,10));
+//        System.out.println(calcI.calculateArea(2,10));
+//        System.out.println(calcI.calculateArea(3,2,2,2));
+//    }
+
+//    public static void main(String[] args) {
+//        CalcI2 calcI2 = new CalcI2();
+//        System.out.println(calcI2.calculateArea(1,new double[] {10, 0, 0}));
+//        System.out.println(calcI2.calculateArea(2,new double[] {10, 0, 0}));
+//        System.out.println(calcI2.calculateArea(3,new double[] {2, 2, 2}));
+//    }

@@ -1,11 +1,9 @@
-package de.telran.team001;
-
-import com.github.javafaker.Faker;
+package de.telran.game001;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import static de.telran.team001.Handler.*;
+
+import static de.telran.game001.Handler.*;
 
 public class Main {
     //private static final Faker FAKER = new Faker();

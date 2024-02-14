@@ -1,4 +1,4 @@
-package de.telran.team001;
+package de.telran.game001;
 
 public enum  GroupTeams {
     ADULT,

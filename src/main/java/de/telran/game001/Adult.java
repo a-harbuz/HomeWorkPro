@@ -1,4 +1,4 @@
-package de.telran.team001;
+package de.telran.game001;
 
 public class Adult extends Participant{
     public Adult(String name, int age, CreditCard card) {
