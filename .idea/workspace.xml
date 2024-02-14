@@ -9,21 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="normal Team">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw013CodeSmells/Calc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw013CodeSmells/temp.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/de/telran/hw013CodeSmells/CalcI2Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/de/telran/hw013CodeSmells/CalcITest.java" afterDir="false" />
+    <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="code Smell">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Adult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/Adult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/CreditCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/GroupTeams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/GroupTeams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/Handler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/Participant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/team001/TeamsComplexReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/TeamsComplexReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw013CodeSmells/Calc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw013CodeSmells/Calc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw013CodeSmells/temp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw013CodeSmells/temp.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +83,7 @@
       <recent name="de.telran.testing001" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CalcITest">
+  <component name="RunManager" selected="JUnit.CalcI2Test">
     <configuration name="CalcI2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
@@ -175,8 +164,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CalcITest" />
         <item itemvalue="JUnit.CalcI2Test" />
+        <item itemvalue="JUnit.CalcITest" />
         <item itemvalue="JUnit.CalcI2Test.calculateAreaNegativeTest" />
         <item itemvalue="JUnit.CalcI2Test.calculateArea" />
         <item itemvalue="JUnit.CalcITest.calculateAreaNegativeTest" />
@@ -447,7 +436,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707851028551</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="code Smell">
+      <option name="closed" value="true" />
+      <created>1707912870827</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1707912870827</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -477,7 +474,8 @@
     <MESSAGE value="sdcfsdcfwdfwefwefq" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="normal Team" />
-    <option name="LAST_COMMIT_MESSAGE" value="normal Team" />
+    <MESSAGE value="code Smell" />
+    <option name="LAST_COMMIT_MESSAGE" value="code Smell" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

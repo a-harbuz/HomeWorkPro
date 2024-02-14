@@ -11,3 +11,7 @@
 //        System.out.println(calcI2.calculateArea(2,new double[] {10, 0, 0}));
 //        System.out.println(calcI2.calculateArea(3,new double[] {2, 2, 2}));
 //    }
+
+
+//https://github.com/a-harbuz/HomeWorkPro/blob/master/src/main/java/de/telran/hw013CodeSmells/Calc.java
+//https://github.com/a-harbuz/HomeWorkPro/tree/master/src/test/java/de/telran/hw013CodeSmells

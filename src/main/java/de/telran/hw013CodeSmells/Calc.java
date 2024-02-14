@@ -49,9 +49,9 @@ class CalcI2 {
     public double calculateArea(int shapeType, double[] params) {
         // shapeType:
         // 1 - круг, 2 - квадрат, 3 - треугольник
+        if (shapeType<1 || shapeType>3) throw new IllegalArgumentException("shapeType must be from 1 to 3");
         if ((shapeType==1 || shapeType==2) && params[0]<=0) throw new IllegalArgumentException("First argument must be greater than zero.");
         if (shapeType==3 && (params[0]<=0 || params[1]<=0 || params[2]<=0)) throw new IllegalArgumentException("Arguments must be greater than zero.");
-        if (shapeType<1 || shapeType>3) throw new IllegalArgumentException("shapeType must be from 1 to 3");
 
         return switch (shapeType) {
             case 1 -> Math.PI * params[0] * params[0];
