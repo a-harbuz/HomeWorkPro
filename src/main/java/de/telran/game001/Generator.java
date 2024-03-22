@@ -19,8 +19,9 @@ public class Generator {
     }
 
     public static List<Team<Participant>> generateGroupTeams(GroupTeams group, int cursor) {
+        // cursor - позиция курсора в фалйе при чтении cards.txt
         List<Team<Participant>> list = new ArrayList<>();
-        String path = "C:\\JAVA\\HomeWorkPro\\src\\main\\java\\de\\telran\\team001\\cards.txt";
+        String path = "C:\\JAVA\\HomeWorkPro\\src\\main\\java\\de\\telran\\game001\\cards.txt";
         //BufferedReader reader = new BufferedReader(new FileReader(path))
         try (RandomAccessFile raf = new RandomAccessFile(path, "r")) {
             //System.out.println(reader.readLine());

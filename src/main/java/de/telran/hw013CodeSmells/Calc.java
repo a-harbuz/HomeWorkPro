@@ -39,9 +39,7 @@ class CalcI {
             return Math.sqrt(s * (s - a) * (s - b) * (s - c));
         } else throw new IllegalArgumentException("shapeType must be 3");
     }
-
 }
-
 
 
 //Var.2 (как вариант, но мне больше первый нравится)
@@ -63,5 +61,4 @@ class CalcI2 {
             default -> 0.0;
         };
     }
-
 }

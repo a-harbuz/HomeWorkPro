@@ -103,15 +103,6 @@ public class Handler {
     }
 //=========================================Statistic===============================================
     //Найти команду с максимальными баллами: ++
-//    public static void teamMax(List<List<Team<Participant>>> teamsList){
-//        Map.Entry<Team<Participant>, Double> maxEntry = resultGamesMap.entrySet().stream()
-//                .max(Map.Entry.comparingByValue())
-//                .orElse(null);
-//
-//        System.out.print("Команда с максимальными баллами: ");
-//        System.out.println(maxEntry.getKey().getTeamName() + " : " + maxEntry.getValue());
-//
-//    }
     public static Map.Entry<Team<Participant>, Double> teamMax(Map<Team<Participant>, Double> inputMap){
         return inputMap.entrySet().stream()
                 .max(Map.Entry.comparingByValue())
@@ -123,7 +114,6 @@ public class Handler {
         return resultGamesMap.values().stream()
                 .mapToDouble(Double::doubleValue)
                 .sum();
-        //System.out.println("Всего баллов: " + s);
     }
 
     //Список команд без баллов: ++
@@ -371,9 +361,9 @@ public class Handler {
 //смотрю....
 //        [15:17]
 //        сбрасываете winnersCount в ноль, даже если команда не
-//        выиграла следующий матч - зачем -> подсчет побед именно подряд !!!
-//            Результат максимальный на данный момент записывается перед этим в обьект,
-//            далее счетчик обнуляется для поска следующего максимума
+//        выиграла следующий матч - зачем => подсчет побед именно подряд !!!
+//                                           Результат максимальный на данный момент записывается перед этим в обьект,
+//                                           далее счетчик обнуляется для поска следующего максимума
 //        [15:18]
 //        collect(Collectors.averagingInt(Participant::getAge)) - а если список null?
 //        [15:18]

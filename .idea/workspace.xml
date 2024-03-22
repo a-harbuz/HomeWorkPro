@@ -10,9 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="324fa954-5c3f-4087-b8d7-2e90e8ac4e30" name="Changes" comment="code Smell">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw000/recursion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/my001mysqlJDBC/DateTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/telran/testServlets/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/de/telran/game001/GeneratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/de/telran/game001/HandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/de/telran/game001/util/TeamsCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/game001/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/game001/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/game001/Handler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw013CodeSmells/Calc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw013CodeSmells/Calc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/telran/hw013CodeSmells/temp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/telran/hw013CodeSmells/temp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/telran/hw013CodeSmells/CalcI2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/telran/hw013CodeSmells/CalcI2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/telran/hw013CodeSmells/CalcITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/telran/hw013CodeSmells/CalcITest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,12 +33,25 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="github/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -49,25 +73,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.de.telran.hw005Enum.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/3/mysql-connector-j-8.3.0.zip",
-    "onboarding.tips.debug.path": "C:/JAVA/HomeWorkPro/src/main/java/de/telran/Main.java",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.appearance"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.de.telran.hw005Enum.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HandlerTest.showResultGameMapTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JAVA/TransportCompany&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/JAVA/HomeWorkPro/src/main/java/de/telran/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="de.telran.hw001.task1" />
@@ -76,14 +107,27 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="de.telran.game001" />
       <recent name="de.telran.hw013CodeSmells" />
       <recent name="de.telran.hw0013Mockito2" />
       <recent name="de.telran.hw012Mockito" />
       <recent name="de.telran.hw012Mackito" />
-      <recent name="de.telran.testing001" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CalcI2Test">
+  <component name="RunManager" selected="JUnit.HandlerTest.showResultGameMapTest">
+    <configuration name="recursion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.telran.hw000.recursion" />
+      <module name="HomeWorkPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.telran.hw000.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CalcI2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeWorkPro" />
       <extension name="coverage">
@@ -95,38 +139,6 @@
       <option name="PACKAGE_NAME" value="de.telran.hw013CodeSmells" />
       <option name="MAIN_CLASS_NAME" value="de.telran.hw013CodeSmells.CalcI2Test" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalcI2Test.calculateArea" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HomeWorkPro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.telran.hw013CodeSmells.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.telran.hw013CodeSmells" />
-      <option name="MAIN_CLASS_NAME" value="de.telran.hw013CodeSmells.CalcI2Test" />
-      <option name="METHOD_NAME" value="calculateArea" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalcI2Test.calculateAreaNegativeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HomeWorkPro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.telran.hw013CodeSmells.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.telran.hw013CodeSmells" />
-      <option name="MAIN_CLASS_NAME" value="de.telran.hw013CodeSmells.CalcI2Test" />
-      <option name="METHOD_NAME" value="calculateAreaNegativeTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,20 +174,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HandlerTest.showResultGameMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HomeWorkPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.telran.game001.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.telran.game001" />
+      <option name="MAIN_CLASS_NAME" value="de.telran.game001.HandlerTest" />
+      <option name="METHOD_NAME" value="showResultGameMapTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CalcI2Test" />
-        <item itemvalue="JUnit.CalcITest" />
-        <item itemvalue="JUnit.CalcI2Test.calculateAreaNegativeTest" />
-        <item itemvalue="JUnit.CalcI2Test.calculateArea" />
+        <item itemvalue="JUnit.HandlerTest.showResultGameMapTest" />
+        <item itemvalue="Application.recursion" />
         <item itemvalue="JUnit.CalcITest.calculateAreaNegativeTest" />
+        <item itemvalue="JUnit.CalcITest" />
+        <item itemvalue="JUnit.CalcI2Test" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
       </set>
     </attachedChunks>
   </component>
@@ -187,6 +215,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701981518379</updated>
+      <workItem from="1708360443100" duration="113000" />
+      <workItem from="1708361064613" duration="5100000" />
+      <workItem from="1708555314484" duration="684000" />
+      <workItem from="1708602184743" duration="2193000" />
+      <workItem from="1708677291485" duration="1391000" />
+      <workItem from="1709326967533" duration="1042000" />
+      <workItem from="1709328025515" duration="140000" />
+      <workItem from="1711144879596" duration="638000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -444,8 +480,19 @@
       <option name="project" value="LOCAL" />
       <updated>1707912870827</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="code Smell">
+      <option name="closed" value="true" />
+      <created>1707923583845</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1707923583845</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -484,6 +531,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HomeWorkPro$PaymentServiceTest.ic" NAME="PaymentServiceTest Coverage Results" MODIFIED="1707851622040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>de.telran.hw0013Mockito2.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/HomeWorkPro$CalcI2Test.ic" NAME="CalcI2Test Coverage Results" MODIFIED="1708072707883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>de.telran.hw013CodeSmells.*</FILTER>
     </SUITE>
   </component>
 </project>
